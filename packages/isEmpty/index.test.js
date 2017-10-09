@@ -3,10 +3,10 @@ import isEmpty from './index';
 
 test('undefined is an empty string', t => t.true(isEmpty()));
 
-test('Single whitespace is empty string', t => t.true(isEmpty(' ')));
+test('"" is an empty string', t => t.true(isEmpty('')));
 
-test('Only whitespace is empty string', t => t.true(isEmpty('\n\n\t')));
+test('Single whitespace is not empty', t => t.false(isEmpty(' ')));
 
-test('Only tabs, newlines are empty', t => t.false(isEmpty('a')));
+test('Whitespace is not empty', t => t.false(isEmpty('\n\n\t')));
 
-test('Non whitespace is not empty', t => t.false(isEmpty('a')));
+test('words are not empty', t => t.false(isEmpty('a')));
