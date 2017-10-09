@@ -1,10 +1,10 @@
 {
-  "name": "@quillio/capitalize",
+  "name": "@quillio/camalize",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",
   "scripts": {
-    "build": "cd ./../../ && source build.sh && build capitalize"
+    "build": "cd ./../../ && source build.sh && build camalize"
   },
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   },
   "keywords": [
     "javascript",
-    "capitalize"
+    "camalize"
   ],
   "author": "admin@quillio.io",
   "contributors": [
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/quillio/stringy#readme",
   "dependencies": {
-    "@quillio/capitalize": "0.0.1"
+    "@quillio/toCamelCase": "0.0.1"
   }
 }

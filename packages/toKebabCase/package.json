@@ -1,10 +1,10 @@
 {
-  "name": "@quillio/slugify",
+  "name": "@quillio/toKebabCase",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",
   "scripts": {
-    "build": "cd ./../../ && source build.sh && build slugify"
+    "build": "cd ./../../ && source build.sh && build toKebabCase"
   },
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   },
   "keywords": [
     "javascript",
-    "slugify"
+    "kebabCase"
   ],
   "author": "admin@quillio.io",
   "contributors": [
@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/quillio/stringy#readme",
   "dependencies": {
-    "@quillio/toKebabCase": "0.0.1",
-    "@quillio/latinise": "0.0.1"
+
   }
 }
