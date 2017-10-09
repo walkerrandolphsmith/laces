@@ -1,26 +1,28 @@
+import isEmpty from '@quillio/isEmpty'
+
 const defaultConfig = {
     integers: true,
     real: true
 };
 
-const patternMap = {
-    0: /^[1-9]*\d*$/,
-    1: /^[-]?[1-9]*\d*$/,
-    2: /^[-]?[1-9]*\.?\d*$/
-};
-
 export default (string, config=defaultConfig) => {
+    if(typeof string === 'boolean' || Array.isArray(string) || isEmpty(string)) {
+        return false
+    }
+
+    if(string.startsWith('0') || string.startsWith('-0')) {
+        return false;
+    }
+
     const finalConfig = { ...defaultConfig, ...config };
 
-    let level = 2;
+    const isInt = Number.isInteger(Number.parseFloat(string));
+
     if(finalConfig.integers === false) {
-        level = 0;
+        return isInt && !string.startsWith('-')
     }
     else if(finalConfig.real === false) {
-        level = 1;
+        return isInt
     }
-
-    const pattern = patternMap[level];
-
-    return new RegExp(pattern).test(string);
+    return !isNaN(string)
 }
