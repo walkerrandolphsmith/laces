@@ -1,6 +1,6 @@
 import test from 'ava';
-import capitalize from './index';
+import sut from './index';
 
-test('capitalize', t => {
-    t.true(capitalize('name') === 'Name');
-});
+test('word', t => t.true(sut('name') === 'Name'));
+
+test('empty', t => t.true(sut('') === ''));

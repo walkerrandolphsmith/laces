@@ -1,6 +1,6 @@
 import test from 'ava';
-import collapse from './index';
+import sut from './index';
 
-test('Kill white spaces', t => t.true(collapse("\nfirst and \t\tlast") === "firstandlast"));
+test('Kill white spaces', t => t.true(sut("\nfirst and \t\tlast") === "firstandlast"));
 
-test('Don\'t muck with strings without white space', t => t.true(collapse("name") === "name"));
+test('Don\'t muck with strings without white space', t => t.true(sut("name") === "name"));

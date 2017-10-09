@@ -1,6 +1,6 @@
 import test from 'ava';
-import latinise from './index';
+import sut from './index';
 
-test('No Latin chars', t => t.true(latinise('name') === 'name'));
+test('No Latin chars', t => t.true(sut('name') === 'name'));
 
-test('Latin chars', t => t.true(latinise('crème brûlée') === 'creme brulee'));
+test('Latin chars', t => t.true(sut('crème brûlée') === 'creme brulee'));

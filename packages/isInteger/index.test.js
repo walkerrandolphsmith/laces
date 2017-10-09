@@ -1,8 +1,8 @@
 import test from 'ava';
-import isInteger from './index';
+import sut from './index';
 
-test('Natural number', t => t.true(isInteger('1234556')));
+test('Natural number', t => t.true(sut('1234556')));
 
-test('Integers', t => t.true(isInteger('-1234556')));
+test('Integers', t => t.true(sut('-1234556')));
 
-test('Empty string', t => t.false(isInteger('  ')));
+test('Empty string', t => t.false(sut('  ')));

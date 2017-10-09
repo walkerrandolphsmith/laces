@@ -1,4 +1,4 @@
 import test from 'ava';
-import toUpperCase from './index';
+import sut from './index';
 
-test('All caps', t => t.true(toUpperCase('myVar') === 'MYVAR'));
+test('All caps', t => t.true(sut('myVar') === 'MYVAR'));

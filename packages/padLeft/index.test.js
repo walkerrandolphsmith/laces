@@ -1,8 +1,8 @@
 import test from 'ava';
-import padLeft from './index';
+import sut from './index';
 
-test('Apply no padding', t => t.deepEqual(padLeft('name'), 'name'));
+test('Apply no padding', t => t.deepEqual(sut('name'), 'name'));
 
-test('Default padding', t => t.deepEqual(padLeft('name', 2), '  name'));
+test('Default padding', t => t.deepEqual(sut('name', 2), '  name'));
 
-test('Custom padding', t => t.deepEqual(padLeft('name', 2, 'x'), 'xxname'));
+test('Custom padding', t => t.deepEqual(sut('name', 2, 'x'), 'xxname'));

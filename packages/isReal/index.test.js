@@ -1,14 +1,14 @@
 import test from 'ava';
-import isReal from './index';
+import sut from './index';
 
-test('Natural number', t => t.true(isReal('1234556')));
+test('Natural number', t => t.true(sut('1234556')));
 
-test('Integers', t => t.true(isReal('-1234556')));
+test('Integers', t => t.true(sut('-1234556')));
 
-test('Reals', t => t.true(isReal('-1234.556')));
+test('Reals', t => t.true(sut('-1234.556')));
 
-test('Padded', t => t.false(isReal('-01234556')));
+test('Padded', t => t.false(sut('-01234556')));
 
-test('Padded', t => t.false(isReal('01234556')));
+test('Padded', t => t.false(sut('01234556')));
 
-test('Empty string', t => t.false(isReal('  ')));
+test('Empty string', t => t.false(sut('  ')));
