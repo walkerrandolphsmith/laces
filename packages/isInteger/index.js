@@ -1,0 +1,1 @@
+export default (string) => !string.startsWith('0') && Number.isInteger(Number.parseFloat(string));
