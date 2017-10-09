@@ -1,10 +1,10 @@
 {
-  "name": "@quillio/clamp",
+  "name": "@quillio/isEmpty",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",
   "scripts": {
-    "build": "cd ./../../ && source build.sh && build clamp"
+    "build": "cd ./../../ && source build.sh && build isEmpty"
   },
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   },
   "keywords": [
     "javascript",
-    "clamp"
+    "isEmpty"
   ],
   "author": "admin@quillio.io",
   "contributors": [

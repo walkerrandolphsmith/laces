@@ -1,10 +1,10 @@
 {
-  "name": "@quillio/slugify",
+  "name": "@quillio/reverse",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",
   "scripts": {
-    "build": "cd ./../../ && source build.sh && build slugify"
+    "build": "cd ./../../ && source build.sh && build reverse"
   },
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   },
   "keywords": [
     "javascript",
-    "slugify"
+    "reverse"
   ],
   "author": "admin@quillio.io",
   "contributors": [
