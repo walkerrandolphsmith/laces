@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/quillio/stringy#readme",
   "dependencies": {
-    "@quillio/isEmpty": "0.0.1"
+
   }
 }
