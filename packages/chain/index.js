@@ -1,20 +1,27 @@
 import functions from './functions';
 
-const chain = (string) => {
-    const wrappedFns = Object.keys(functions).reduce((wrappers, key) => {
-        const fn = functions[key];
+const chain = function (string) {
+    let s = string;
 
-        const wrapped = (...args) => chain(fn(string, ...args));
+    const wrappedFns = Object
+        .keys(functions)
+        .reduce((wrappers, key) => {
+            const fn = functions[key];
 
-        return {
-            ...wrappers,
-            [key]: wrapped
-        };
-    }, {});
+            const wrapped = function (...args) {
+                s = fn(s, ...args);
+                return this;
+            };
+
+            return {
+                ...wrappers,
+                [key]: wrapped
+            };
+        }, {});
 
     return {
         ...wrappedFns,
-        value: () => string
+        value: () => s
     }
 };
 
