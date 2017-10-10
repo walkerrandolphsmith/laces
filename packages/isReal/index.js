@@ -1,7 +1,7 @@
-import isEmpty from '@quillio/isEmpty'
+import isBlank from '@quillio/isBlank'
 
 export default (string) => {
-    if(typeof string === 'boolean' || Array.isArray(string) || isEmpty(string)) {
+    if(typeof string === 'boolean' || Array.isArray(string) || isBlank(string)) {
         return false
     }
 
@@ -9,5 +9,5 @@ export default (string) => {
         return false;
     }
 
-    return !isNaN(string)
+    return !isNaN(string);
 }

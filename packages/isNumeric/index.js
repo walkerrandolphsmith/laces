@@ -1,4 +1,4 @@
-import isEmpty from '@quillio/isEmpty'
+import isBlank from '@quillio/isBlank'
 
 const defaultConfig = {
     integers: true,
@@ -6,7 +6,7 @@ const defaultConfig = {
 };
 
 export default (string, config=defaultConfig) => {
-    if(typeof string === 'boolean' || Array.isArray(string) || isEmpty(string)) {
+    if(typeof string === 'boolean' || Array.isArray(string) || isBlank(string)) {
         return false
     }
 
