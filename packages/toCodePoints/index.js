@@ -1,1 +1,3 @@
-export default (string) => string.split('').map(s => s.codePointAt());
+import toChars from '@quillio/toChars';
+
+export default (string) => toChars(string).map(s => s.codePointAt());

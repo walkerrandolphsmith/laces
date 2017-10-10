@@ -1,3 +1,5 @@
+import toChars from '@quillio/toChars';
+
 const map = {
     "Á": "A",
     "Ă": "A",
@@ -825,5 +827,4 @@ const map = {
     "ₓ": "x"
 };
 
-
-export default (string) => string.split('').map(char => map[char] ? map[char] : char).join('');
+export default (string) => toChars(string).map(char => map[char] ? map[char] : char).join('');

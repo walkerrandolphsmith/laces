@@ -1,10 +1,10 @@
 {
-  "name": "@quillio/latinise",
+  "name": "@quillio/toChars",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",
   "scripts": {
-    "build": "cd ./../../ && source build.sh && build latinise"
+    "build": "cd ./../../ && source build.sh && build toChars"
   },
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   },
   "keywords": [
     "javascript",
-    "latinise"
+    "toChars"
   ],
   "author": "admin@quillio.io",
   "contributors": [
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/quillio/stringy#readme",
   "dependencies": {
-    "@quillio/toChars": "0.0.1"
+
   }
 }
