@@ -1,4 +1,4 @@
 import test from 'ava';
 import sut from './index';
 
-test('All caps', t => t.true(sut('MYVAR') === 'myvar'));
+test('All caps', t => t.is(sut('MYVAR'), 'myvar'));
