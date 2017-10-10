@@ -31,6 +31,9 @@ import toLines from '@quillio/toLines';
 import toLowerCase from '@quillio/toLowerCase';
 import toSnakeCase from '@quillio/toSnakeCase';
 import toUpperCase from '@quillio/toUpperCase';
+import trim from '@quillio/trim';
+import trimLeft from '@quillio/trimLeft';
+import trimRight from '@quillio/trimRight';
 
 export const manipulations = {
     camalize,
@@ -51,7 +54,10 @@ export const manipulations = {
     toKebabCase,
     toLowerCase,
     toSnakeCase,
-    toUpperCase
+    toUpperCase,
+    trim,
+    trimLeft,
+    trimRight
 };
 
 

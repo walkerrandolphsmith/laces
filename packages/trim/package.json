@@ -1,0 +1,30 @@
+{
+  "name": "@quillio/trim",
+  "version": "0.0.1",
+  "description": "Collection of common data structures",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "cd ./../../ && source build.sh && build trim"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quillio/stringy.git"
+  },
+  "keywords": [
+    "javascript",
+    "trim"
+  ],
+  "author": "admin@quillio.io",
+  "contributors": [
+    "walkerrandolphsmith@gmail.com"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quillio/stringy/issues"
+  },
+  "homepage": "https://github.com/quillio/stringy#readme",
+  "dependencies": {
+    "@quillio/trimLeft": "0.0.1",
+    "@quillio/trimRight": "0.0.1"
+  }
+}
