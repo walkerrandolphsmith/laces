@@ -1,10 +1,10 @@
 {
-  "name": "@quillio/takeFirst",
+  "name": "@quillio/takeWhile",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",
   "scripts": {
-    "build": "cd ./../../ && source build.sh && build takeFirst"
+    "build": "cd ./../../ && source build.sh && build takeWhile"
   },
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   },
   "keywords": [
     "javascript",
-    "takeFirst"
+    "takeWhile"
   ],
   "author": "admin@quillio.io",
   "contributors": [

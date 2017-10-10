@@ -22,6 +22,9 @@ import repeat from '@quillio/repeat';
 import reverse from '@quillio/reverse';
 import slugify from '@quillio/slugify';
 import startsWith from '@quillio/startsWith';
+import takeFirst from '@quillio/takeFirst';
+import takeLast from '@quillio/takeLast';
+import takeWhile from '@quillio/takeWhile';
 import template from '@quillio/template';
 import toCamelCase from '@quillio/toCamelCase';
 import toChars from '@quillio/toChars';
@@ -50,6 +53,9 @@ export const manipulations = {
     reverse,
     slugify,
     template,
+    takeFirst,
+    takeLast,
+    takeWhile,
     toCamelCase,
     toKebabCase,
     toLowerCase,
