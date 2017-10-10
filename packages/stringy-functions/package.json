@@ -1,0 +1,61 @@
+{
+  "name": "@quillio/stringy-functions",
+  "version": "0.0.1",
+  "description": "Collection of common data structures",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "cd ./../../ && source build.sh && build stringy-functions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quillio/stringy.git"
+  },
+  "keywords": [
+    "javascript",
+    "stringy-functions"
+  ],
+  "author": "admin@quillio.io",
+  "contributors": [
+    "walkerrandolphsmith@gmail.com"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quillio/stringy/issues"
+  },
+  "homepage": "https://github.com/quillio/stringy#readme",
+  "dependencies": {
+    "@quillio/camalize": "0.0.1",
+    "@quillio/capitalize": "0.0.1",
+    "@quillio/charAt": "0.0.1",
+    "@quillio/chompLeft": "0.0.1",
+    "@quillio/chompRight": "0.0.1",
+    "@quillio/clamp": "0.0.1",
+    "@quillio/collapse": "0.0.1",
+    "@quillio/endsWith": "0.0.1",
+    "@quillio/isAlpha": "0.0.1",
+    "@quillio/isAlphaNumeric": "0.0.1",
+    "@quillio/isBetween": "0.0.1",
+    "@quillio/isBlank": "0.0.1",
+    "@quillio/isEmpty": "0.0.1",
+    "@quillio/isInteger": "0.0.1",
+    "@quillio/isNaturalNumber": "0.0.1",
+    "@quillio/isNumeric": "0.0.1",
+    "@quillio/isReal": "0.0.1",
+    "@quillio/latinise": "0.0.1",
+    "@quillio/padLeft": "0.0.1",
+    "@quillio/padRight": "0.0.1",
+    "@quillio/repeat": "0.0.1",
+    "@quillio/reverse": "0.0.1",
+    "@quillio/slugify": "0.0.1",
+    "@quillio/startsWith": "0.0.1",
+    "@quillio/template": "0.0.1",
+    "@quillio/toCamelCase": "0.0.1",
+    "@quillio/toChars": "0.0.1",
+    "@quillio/toCodePoints": "0.0.1",
+    "@quillio/toKebabCase": "0.0.1",
+    "@quillio/toLines": "0.0.1",
+    "@quillio/toLowerCase": "0.0.1",
+    "@quillio/toSnakeCase": "0.0.1",
+    "@quillio/toUpperCase": "0.0.1"
+  }
+}

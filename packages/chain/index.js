@@ -1,4 +1,4 @@
-import functions from './functions';
+import { manipulations as functions } from '@quillio/stringy-functions';
 
 const chain = function (string) {
     let s = string;

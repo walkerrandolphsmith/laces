@@ -1,1 +1,3 @@
-export { default as capitalize } from '@quillio/capitalize';
+import stringy from '@quillio/stringy-functions';
+
+export default stringy;
