@@ -54,6 +54,8 @@ export const manipulations = {
     latinise,
     padLeft,
     padRight,
+    remove,
+    removeFirst,
     repeat,
     reverse,
     slugify,
