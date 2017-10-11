@@ -33,7 +33,9 @@ import toKebabCase from '@quillio/toKebabCase';
 import toLines from '@quillio/toLines';
 import toLowerCase from '@quillio/toLowerCase';
 import toSnakeCase from '@quillio/toSnakeCase';
+import toSpaceCase from '@quillio/toSpaceCase';
 import toUpperCase from '@quillio/toUpperCase';
+import toWords from '@quillio/toWords';
 import trim from '@quillio/trim';
 import trimLeft from '@quillio/trimLeft';
 import trimRight from '@quillio/trimRight';
@@ -60,6 +62,7 @@ export const manipulations = {
     toKebabCase,
     toLowerCase,
     toSnakeCase,
+    toSpaceCase,
     toUpperCase,
     trim,
     trimLeft,
@@ -84,7 +87,8 @@ const queries = {
 const unwrappers = {
     toChars,
     toCodePoints,
-    toLines
+    toLines,
+    toWords
 };
 
 export default {

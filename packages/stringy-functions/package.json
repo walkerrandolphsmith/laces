@@ -59,7 +59,9 @@
     "@quillio/toLines": "0.0.1",
     "@quillio/toLowerCase": "0.0.1",
     "@quillio/toSnakeCase": "0.0.1",
+    "@quillio/toSpaceCase": "0.0.1",
     "@quillio/toUpperCase": "0.0.1",
+    "@quillio/toWords": "0.0.1",
     "@quillio/trim": "0.0.1",
     "@quillio/trimLeft": "0.0.1",
     "@quillio/trimRight": "0.0.1"
