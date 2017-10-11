@@ -44,6 +44,8 @@
     "@quillio/latinise": "0.0.1",
     "@quillio/padLeft": "0.0.1",
     "@quillio/padRight": "0.0.1",
+    "@quillio/remove": "0.0.1",
+    "@quillio/removeFirst": "0.0.1",
     "@quillio/repeat": "0.0.1",
     "@quillio/reverse": "0.0.1",
     "@quillio/slugify": "0.0.1",

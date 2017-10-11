@@ -1,0 +1,29 @@
+{
+  "name": "@quillio/remove",
+  "version": "0.0.1",
+  "description": "Collection of common data structures",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "cd ./../../ && source build.sh && build remove"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quillio/stringy.git"
+  },
+  "keywords": [
+    "javascript",
+    "remove"
+  ],
+  "author": "admin@quillio.io",
+  "contributors": [
+    "walkerrandolphsmith@gmail.com"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quillio/stringy/issues"
+  },
+  "homepage": "https://github.com/quillio/stringy#readme",
+  "dependencies": {
+
+  }
+}

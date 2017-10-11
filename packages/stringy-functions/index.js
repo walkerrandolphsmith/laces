@@ -18,6 +18,8 @@ import isReal from '@quillio/isReal';
 import latinise from '@quillio/latinise';
 import padLeft from '@quillio/padLeft';
 import padRight from '@quillio/padRight';
+import remove from '@quillio/remove';
+import removeFirst from '@quillio/removeFirst';
 import repeat from '@quillio/repeat';
 import reverse from '@quillio/reverse';
 import slugify from '@quillio/slugify';
