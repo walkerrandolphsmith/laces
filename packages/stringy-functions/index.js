@@ -21,6 +21,7 @@ import padRight from '@quillio/padRight';
 import repeat from '@quillio/repeat';
 import reverse from '@quillio/reverse';
 import slugify from '@quillio/slugify';
+import split from '@quillio/split';
 import startsWith from '@quillio/startsWith';
 import takeFirst from '@quillio/takeFirst';
 import takeLast from '@quillio/takeLast';
@@ -85,6 +86,7 @@ const queries = {
 };
 
 const unwrappers = {
+    split,
     toChars,
     toCodePoints,
     toLines,

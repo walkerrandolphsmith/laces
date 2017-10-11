@@ -47,6 +47,7 @@
     "@quillio/repeat": "0.0.1",
     "@quillio/reverse": "0.0.1",
     "@quillio/slugify": "0.0.1",
+    "@quillio/split": "0.0.1",
     "@quillio/startsWith": "0.0.1",
     "@quillio/takeFirst": "0.0.1",
     "@quillio/takeLast": "0.0.1",
