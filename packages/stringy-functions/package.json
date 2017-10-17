@@ -47,6 +47,7 @@
     "@quillio/remove": "0.0.1",
     "@quillio/removeFirst": "0.0.1",
     "@quillio/repeat": "0.0.1",
+    "@quillio/replace": "0.0.1",
     "@quillio/reverse": "0.0.1",
     "@quillio/slugify": "0.0.1",
     "@quillio/split": "0.0.1",

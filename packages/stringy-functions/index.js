@@ -21,6 +21,7 @@ import padRight from '@quillio/padRight';
 import remove from '@quillio/remove';
 import removeFirst from '@quillio/removeFirst';
 import repeat from '@quillio/repeat';
+import replace from '@quillio/replace';
 import reverse from '@quillio/reverse';
 import slugify from '@quillio/slugify';
 import split from '@quillio/split';
@@ -57,6 +58,7 @@ export const manipulations = {
     remove,
     removeFirst,
     repeat,
+    replace,
     reverse,
     slugify,
     template,

@@ -1,0 +1,1 @@
+export default (string, pattern, stratgey) => string.replace(pattern, stratgey);
