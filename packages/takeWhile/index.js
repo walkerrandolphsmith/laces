@@ -1,4 +1,4 @@
-import toChars from '@quillio/toChars';
+import toChars from '@quillio/stringy-toChars';
 
 const noop = c => c;
 

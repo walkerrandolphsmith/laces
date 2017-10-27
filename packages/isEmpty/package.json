@@ -1,5 +1,5 @@
 {
-  "name": "@quillio/isEmpty",
+  "name": "@quillio/stringy-isEmpty",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",

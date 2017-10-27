@@ -1,5 +1,5 @@
 {
-  "name": "@quillio/toCamelCase",
+  "name": "@quillio/stringy-toCamelCase",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/quillio/stringy#readme",
   "dependencies": {
-    "@quillio/capitalize": "0.0.1"
+    "@quillio/stringy-capitalize": "0.0.1"
   }
 }

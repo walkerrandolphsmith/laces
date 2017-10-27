@@ -1,5 +1,5 @@
 {
-  "name": "@quillio/replace",
+  "name": "@quillio/stringy-replace",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",

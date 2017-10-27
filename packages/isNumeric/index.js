@@ -1,4 +1,4 @@
-import isBlank from '@quillio/isBlank'
+import isBlank from '@quillio/stringy-isBlank'
 
 const defaultConfig = {
     integers: true,

@@ -1,4 +1,4 @@
-import isBlank from '@quillio/isBlank'
+import isBlank from '@quillio/stringy-isBlank'
 
 export default (string) => {
     if(typeof string === 'boolean' || Array.isArray(string) || isBlank(string)) {

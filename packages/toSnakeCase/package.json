@@ -1,5 +1,5 @@
 {
-  "name": "@quillio/toSnakeCase",
+  "name": "@quillio/stringy-toSnakeCase",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",

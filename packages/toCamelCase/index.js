@@ -1,4 +1,4 @@
-import capitalize from '@quillio/capitalize';
+import capitalize from '@quillio/stringy-capitalize';
 
 export default (string) => {
     console.log('red');

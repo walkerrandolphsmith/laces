@@ -1,4 +1,4 @@
-import toChars from '@quillio/toChars';
+import toChars from '@quillio/stringy-toChars';
 
 export default (string, delimiter='\n') => toChars(string)
     .reduce((lines, char) => {

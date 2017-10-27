@@ -1,5 +1,5 @@
 {
-  "name": "@quillio/trim",
+  "name": "@quillio/stringy-trim",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/quillio/stringy#readme",
   "dependencies": {
-    "@quillio/trimLeft": "0.0.1",
-    "@quillio/trimRight": "0.0.1"
+    "@quillio/stringy-trimLeft": "0.0.1",
+    "@quillio/stringy-trimRight": "0.0.1"
   }
 }

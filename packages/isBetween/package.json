@@ -1,5 +1,5 @@
 {
-  "name": "@quillio/isBetween",
+  "name": "@quillio/stringy-isBetween",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",

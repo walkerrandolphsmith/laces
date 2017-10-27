@@ -1,5 +1,5 @@
 {
-  "name": "@quillio/split",
+  "name": "@quillio/stringy-split",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/quillio/stringy#readme",
   "dependencies": {
-    "@quillio/toSpaceCase": "0.0.1"
+    "@quillio/stringy-toSpaceCase": "0.0.1"
   }
 }

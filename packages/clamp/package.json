@@ -1,5 +1,5 @@
 {
-  "name": "@quillio/clamp",
+  "name": "@quillio/stringy-clamp",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",

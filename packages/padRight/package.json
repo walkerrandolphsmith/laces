@@ -1,5 +1,5 @@
 {
-  "name": "@quillio/padRight",
+  "name": "@quillio/stringy-padRight",
   "version": "0.0.1",
   "description": "Collection of common data structures",
   "main": "dist/index.js",
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/quillio/stringy#readme",
   "dependencies": {
-    "@quillio/repeat": "0.0.1"
+    "@quillio/stringy-repeat": "0.0.1"
   }
 }
