@@ -1,17 +1,14 @@
 import React from 'react';
-import Link from 'gatsby-link'
 
-const Signature = ({ text }) => (
-    <div className="signature">
-        {text}
-    </div>
+const Signature = ({ name, text }) => (
+    <div className="signature" id={name}>{text}</div>
 );
 
 const Links = ({ source, npm, feedback }) => (
     <ul className="links">
-        <Link to={source}>source</Link>
-        <Link to={npm}>npm package</Link>
-        <Link to={feedback}>edit doc</Link>
+        <a href={source}>source</a>
+        <a href={npm}>npm package</a>
+        <a href={feedback}>edit doc</a>
     </ul>
 );
 
@@ -29,7 +26,7 @@ const Example = ({ text }) => (
 
 const Method = (props) => (
     <div className="method">
-        <Signature text={props.signature} />
+        <Signature name={props.name} text={props.signature} />
         <Links {...props} />
         <Description text={props.description} />
         <Example text={props.example} />

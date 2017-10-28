@@ -1,12 +1,19 @@
 import React from 'react';
 
+const Item = ({ text }) => {
+    const href = `#${text}`;
+    return (
+        <li className="function"><a className="internal" href={href}>{text}</a></li>
+    )
+};
+
 const Group = ({ header, items, className, toggle }) => (
     <div className={className}>
         <i className="expander" onClick={toggle} />
         <h2>{header}</h2>
         <ul className="functions">
             {items.map(
-                (item, i) => (<li key={i} className="function">{item}</li>)
+                (item, i) => (<Item key={i} text={item} />)
             )}
         </ul>
     </div>
