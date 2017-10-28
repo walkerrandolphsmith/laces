@@ -10,6 +10,14 @@ const Header = () => (
       <h1>
         <Link to="/">Stringy</Link>
       </h1>
+      <div className="links">
+          <span>
+              <a href="https://www.github.com/quillio/stringy/releases">v0.0.1</a>
+          </span>
+          <span>
+              <a href="https://www.github.com/quillio/stringy">GitHub</a>
+          </span>
+      </div>
   </header>
 );
 
