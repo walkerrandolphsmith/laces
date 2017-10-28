@@ -40,4 +40,16 @@ class SmartGroup extends React.Component {
     }
 }
 
-export default SmartGroup;
+const List = (props) => {
+    return props.hasResult ? (
+        <div className="list">
+            {props.groups.map(
+                (group, i) => (<SmartGroup key={i} {...group} />)
+            )}
+        </div>
+    ) :(
+        <span>Sorry no results</span>
+    )
+};
+
+export default List;
