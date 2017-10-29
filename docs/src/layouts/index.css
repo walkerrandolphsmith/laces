@@ -1,20 +1,16 @@
-* {
-  font-family: Consolas,Source Code Pro,Courier New;
-}
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   overflow: hidden;
 }
 body {
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin: 0;
   height: 100vh;
   max-height: 100vh;
   overflow: hidden;
   background: #20232a;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -28,17 +24,6 @@ body::-webkit-scrollbar-track {
 a:active,
 a:hover {
   outline-width: 0;
-}
-h1 {
-  font-size: 2em;
-  margin: .67em 0;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
 }
 hr {
   box-sizing: content-box;
@@ -89,13 +74,12 @@ button:-moz-focusring {
 *:after {
   box-sizing: border-box;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 .quick-start:first-of-type(p) {
   margin: 0;
   padding: 0;
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 h1 {
   font-size: 2.25rem;
@@ -284,7 +268,6 @@ main aside {
 }
 .search input::-webkit-input-placeholder {
   color: #6d6d6d;
-  font-family: monospace;
 }
 
 .search-icon {
@@ -407,6 +390,14 @@ main .content {
   background: white;
 }
 
+.quick-start {
+  padding: 35px;
+}
+
+.quick-start .gatsby-highlight + p {
+  padding-top: 25px;
+}
+
 .method {
   border-top: 1px solid #ececec;
   margin-top: 44px;
@@ -432,7 +423,8 @@ main .content {
 .signature {
   font-size: 40px;
   font-weight: bold;
-  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding-bottom: 20px;
 }
 
 .method .links {
@@ -459,6 +451,10 @@ main .content {
   border-color: #1a1a1a
 }
 
+.method em {
+  font-style: italic;
+  color: blue;
+}
 
 .gatsby-highlight {
   padding: 20px;
@@ -467,62 +463,10 @@ main .content {
   border-radius: 8px;
 }
 
-.method em {
-  font-style: italic;
-  color: blue;
-}
-
-pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 0.85rem;
-  line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  overflow: auto;
-  word-wrap: normal;
-  padding: 1.45rem;
-}
-code {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
-}
-tt,
-code {
-  background-color: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-  "Liberation Mono", Menlo, Courier, monospace;
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-}
-pre code {
-  background: none;
-  line-height: 1.42;
-}
-code:before,
-code:after,
-tt:before,
-tt:after {
-  letter-spacing: -0.2em;
-  content: " ";
-}
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
-  content: "";
-}
 code, pre {
-  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
-  font-size: 14px;
+  font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;
+  font-size: 1em;
+  line-height: 20px;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -541,6 +485,37 @@ code, pre {
 
   margin: .5em 0;
   overflow: auto;
+}
+pre {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 1.45rem;
+  font-size: 0.85rem;
+  line-height: 1.42;
+  background: hsla(0, 0%, 0%, 0.04);
+  border-radius: 3px;
+  overflow: auto;
+  word-wrap: normal;
+  padding: 1.45rem;
+}
+code {
+  font-size: 0.85rem;
+  line-height: 1.45rem;
+  background-color: hsla(0, 0%, 0%, 0.04);
+  border-radius: 3px;
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+code:before,
+code:after {
+  letter-spacing: -0.2em;
+  content: " ";
+}
+pre code:before,
+pre code:after {
+  content: "";
 }
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection,
@@ -564,22 +539,18 @@ pre[class*="language-"] {
 .token.cdata {
   color: #b6ad9a;
 }
-
 .token.punctuation {
   color: #5FB3B3;
 }
-
 .token.tag,
 .token.operator,
 .token.number {
   color: white;
 }
-
 .token.property,
 .token.function {
   color: #79b6f2;
 }
-
 code.language-css,
 code.language-scss,
 .token.boolean,
@@ -599,16 +570,13 @@ code.language-scss,
 .token.atrule {
   color: #8dc891;
 }
-
 .token.placeholder,
 .token.variable {
   color: #93abdc;
 }
-
 .token.deleted {
   text-decoration: line-through;
 }
-
 .line-highlight {
   background: rgba(45, 32, 6, 0.2);
   background: -webkit-linear-gradient(left, rgba(45, 32, 6, 0.2) 70%, rgba(45, 32, 6, 0));

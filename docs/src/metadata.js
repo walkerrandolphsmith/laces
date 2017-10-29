@@ -92,8 +92,14 @@ export const generateMethods = (edges) => {
         const { frontmatter, html } = edge.node;
         const id = frontmatter.title;
 
-        methods[id]['content'] = html.replace(/<h2>.*<\/h2>/, '')
+        if(id !== 'quickStart')
+            methods[id]['content'] = html.replace(/<h2>.*<\/h2>/, '')
     });
 
     return Object.keys(methods).reduce((list, key) => list.concat({ name: key, ...methods[key] }), []);
 };
+
+export const generateQuickStart = (edges) => {
+    const edge = edges.find(edge => edge.node.frontmatter.title === 'quickStart');
+    return edge.node.html.replace(/<h1>(.*)<\/h1>/, () => '<h1>Hello World</h1>')
+}

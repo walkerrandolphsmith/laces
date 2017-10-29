@@ -1,6 +1,5 @@
 import React from 'react'
-import { groups, generateMethods } from './../metadata';
-
+import { groups, generateMethods, generateQuickStart } from './../metadata';
 
 const Item = ({ text }) => {
     const href = `#${text}`;
@@ -59,10 +58,12 @@ class SmartIndexPage extends React.Component {
     constructor(props, context) {
         super(props, context);
         const methods = generateMethods(props.data.allMarkdownRemark.edges);
+        const quickStart = generateQuickStart(props.data.allMarkdownRemark.edges);
         this.state = {
             filter: '',
             groups: groups,
             methods,
+            quickStart,
             hasResult: true
         };
         this.onChange = this.onChange.bind(this);
@@ -139,6 +140,7 @@ class SmartIndexPage extends React.Component {
                     <List {...this.state} />
                 </aside>
                 <div className="content">
+                    <div className="quick-start" dangerouslySetInnerHTML={{ __html: this.state.quickStart }} />
                     {this.state.methods.map(
                         (method, i) => (<div
                             key={i}

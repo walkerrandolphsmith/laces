@@ -1,16 +1,26 @@
-# stringy
-[![Build Status][ci-badge]][ci]
-[![GitHub issues][issues-badge]][issues]
-[![Stories in Ready][waffle-badge]][waffle]
+---
+title: quickStart
+---
+# Stringy
 
-## Summary
-String utilities in JavaScript
+Stringy is a modern JavaScript string utility library providing modularity and ease of use. 
 
-[ci]: https://travis-ci.org/Quillio/stringy
-[ci-badge]: https://travis-ci.org/Quillio/stringy.svg?branch=master
+### Installation  
 
-[issues]: https://github.com/Quillio/stringy/issues
-[issues-badge]: https://img.shields.io/github/issues/Quillio/stringy.svg
+Using npm:
+```sh
+// Install full build
+$ npm install --save @quillio/stringy
 
-[waffle]: http://waffle.io/Quillio/stringy
-[waffle-badge]: https://img.shields.io/waffle/label/Quillio/stringy.svg
+// Cherry-pick only what you need
+$ npm install --save @quillio/stringy-toSnakeCase
+```
+
+Use in Node.js: 
+```js
+// Load the full build
+const stringy = require('@quillio/stringy')
+
+// Cherry-pick methods for smaller bundles
+const toSnakeCase = require('@quillio/stringy-toSnakeCase')
+```

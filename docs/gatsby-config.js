@@ -25,6 +25,13 @@ module.exports = {
           },
       },
       {
+          resolve: 'gatsby-source-filesystem',
+          options: {
+              name: 'main',
+              path: path.resolve(__dirname, '..', 'README.md'),
+          },
+      },
+      {
           resolve: 'gatsby-transformer-remark',
           options: {
               plugins: [
