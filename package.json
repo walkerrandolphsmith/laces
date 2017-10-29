@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "babel ./src --ignore src/**/*.spec.js -d ./dist",
-    "test": "ava"
+    "test": "ava",
+    "docs": "cd ./docs-src && gatsby develop"
   },
   "repository": {
     "type": "git",

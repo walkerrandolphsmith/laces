@@ -2,7 +2,7 @@
 title: isBlank
 ---
 
-## isBetween(str)
+## isBlank(str)
 
 Determines if a string only contains whitespace characters
 

@@ -2,7 +2,7 @@
 title: isEmpty
 ---
 
-## isBetween(str)
+## isEmpty(str)
 
 Determines if a string contains no characters
 
