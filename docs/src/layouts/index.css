@@ -364,9 +364,9 @@ main aside .list .group:first-child h2 {
   list-style: none;
   border-left: 1px dashed #ddd;
   margin: 0;
-  padding-left: 25px;
   height: 0;
   overflow: hidden;
+  padding-left: 0;
 }
 
 .functions .function {
@@ -374,15 +374,20 @@ main aside .list .group:first-child h2 {
   color: #1a1a1a;
   margin-top: 5px;
   cursor: pointer;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: transparent;
 }
 
 .function a.internal {
   text-decoration: none;
   color: inherit;
+  padding-left: 25px;
 }
 
 .functions .function:hover {
   font-weight: 700;
+  border-left-color: #1a1a1a;
 }
 
 main .content {
