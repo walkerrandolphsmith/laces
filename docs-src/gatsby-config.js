@@ -1,28 +1,24 @@
-var path = require('path');
-
-const methodPath = path.resolve(__dirname, '..', 'packages') + '/**/' + 'README.md';
-
-console.log(methodPath)
+const path = require('path');
 
 module.exports = {
-  pathPrefix: `/stringy`,
+  pathPrefix: '/stringy',
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: 'Stringy',
   },
   plugins: [
-      `gatsby-plugin-react-helmet`,
+      'gatsby-plugin-react-helmet',
       {
-          resolve: `gatsby-source-filesystem`,
+          resolve: 'gatsby-source-filesystem',
           options: {
-              name: `methods`,
-              path: methodPath,
+              name: 'methods',
+              path: `${path.resolve(__dirname, '..', 'packages')}/**/README.md`,
           },
       },
       {
-          resolve: `gatsby-transformer-remark`,
+          resolve: 'gatsby-transformer-remark',
           options: {
               plugins: [
-                  `gatsby-remark-prismjs`,
+                  'gatsby-remark-prismjs',
               ]
           }
       },
