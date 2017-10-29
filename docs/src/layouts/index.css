@@ -1068,14 +1068,6 @@ pre > code.highlight {
   outline-offset: .4em;
 }
 
-.line-numbers .line-numbers-rows {
-  border-right-color: #ece8de;
-}
-
-.line-numbers-rows > span:before {
-  color: #cdc4b1;
-}
-
 .line-highlight {
   background: rgba(45, 32, 6, 0.2);
   background: -webkit-linear-gradient(left, rgba(45, 32, 6, 0.2) 70%, rgba(45, 32, 6, 0));
