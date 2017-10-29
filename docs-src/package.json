@@ -20,6 +20,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gatsby-remark-prismjs": "^1.2.8",
+    "gatsby-source-filesystem": "^1.5.5",
+    "gatsby-transformer-remark": "^1.7.18",
     "prettier": "^1.7.4"
   }
 }

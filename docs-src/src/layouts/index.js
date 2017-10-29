@@ -21,18 +21,20 @@ const Header = () => (
   </header>
 );
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet
-      title="Gatsby Default Starter"
-      meta={[
-        { name: 'description', content: 'Collection of common string utilities in JavaScript' },
-        { name: 'keywords', content: 'stringy string javascript library lib package' },
-      ]}
-    />
-    <Header />
-    {children()}
-  </div>
-);
+const TemplateWrapper = ({ children, data }) => {
+    return (
+        <div>
+            <Helmet
+                title="Gatsby Default Starter"
+                meta={[
+                    { name: 'description', content: 'Collection of common string utilities in JavaScript' },
+                    { name: 'keywords', content: 'stringy string javascript library lib package' },
+                ]}
+            />
+            <Header />
+            {children()}
+        </div>
+    );
+}
 
 export default TemplateWrapper

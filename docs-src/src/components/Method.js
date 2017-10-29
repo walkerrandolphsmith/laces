@@ -24,13 +24,15 @@ const Example = ({ text }) => (
     </div>
 );
 
-const Method = (props) => (
-    <div className="method">
-        <Signature name={props.name} text={props.signature} />
-        <Links {...props} />
-        <Description text={props.description} />
-        <Example text={props.example} />
-    </div>
-);
+const Method = (props) => {
+    return (
+        <div className="method" dangerouslySetInnerHTML={{__html: props.content }}>
+            {/*<Signature name={props.name} text={props.signature} />
+            <Links {...props} />
+            <Description text={props.description} />
+            <Example text={props.example} />*/}
+        </div>
+    );
+}
 
 export default Method;

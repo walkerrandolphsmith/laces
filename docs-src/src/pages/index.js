@@ -1,16 +1,16 @@
 import React from 'react'
 import List from './../components/List';
 import Method from './../components/Method';
-import Search from './../components/Search';
-import { groups, methods } from './../metadata';
+import { groups, generateMethods } from './../metadata';
 
 class SmartIndexPage extends React.Component {
     constructor(props, context) {
         super(props, context);
+        const methods = generateMethods(props.data.allMarkdownRemark.edges);
         this.state = {
             filter: '',
             groups: groups,
-            methods: methods,
+            methods,
             hasResult: true
         };
         this.onChange = this.onChange.bind(this);
@@ -96,4 +96,19 @@ class SmartIndexPage extends React.Component {
     }
 }
 
-export default SmartIndexPage
+export default SmartIndexPage;
+
+export const pageQuery = graphql`
+query data {
+  allMarkdownRemark {
+    edges {
+      node {
+        html
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}
+`;
