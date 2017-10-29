@@ -81,32 +81,12 @@ export const methods = groups
         (map, method) => ({ ...map, [method.name]: method }),{}
     );
 
-const muckWithMarkup = (string, method) => {
-    const name = string.slice(4, string.indexOf('('));
-    const text = string.slice(4, string.indexOf('</h2>'));
-
-    const links = `<ul class="links">
-        <a href=${method.source}>source</a>
-        <a href=${method.npm}>npm package</a>
-        <a href=${method.feedback}>edit doc</a>
-    </ul>`;
-
-    const signature = `<h2 class="signature" id=${name}>${text}</h2>`;
-    string = string.replace(/<h2>.*<\/h2>/, signature + links);
-    string = string.replace('</h2>', '</h2><div class="description">');
-    string = string.replace('<h3>Arguments</h3>', '</div><h3>Arguments</h3>');
-    string = string.replace('<h3>Example</h3>', '<h3>Example</h3><div class="example">');
-    string += '</div>';
-    return string;
-};
-
 export const generateMethods = (edges) => {
     edges.map(edge => {
         const { frontmatter, html } = edge.node;
         const id = frontmatter.title;
 
-
-        methods[id]['content'] = muckWithMarkup(html, methods[id]);
+        methods[id]['content'] = html.replace(/<h2>.*<\/h2>/, '')
     });
 
     return Object.keys(methods).reduce((list, key) => list.concat({ name: key, ...methods[key] }), []);

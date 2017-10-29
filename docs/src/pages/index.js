@@ -142,9 +142,17 @@ class SmartIndexPage extends React.Component {
                     {this.state.methods.map(
                         (method, i) => (<div
                             key={i}
-                            className="method"
-                            dangerouslySetInnerHTML={{__html: method.content }}
-                        />)
+                            className="method">
+                                <header>
+                                    <h3 className="signature" id={method.name}>{method.name}</h3>
+                                    <ul className="links">
+                                        <a href={method.source}>source</a>
+                                        <a href={method.npm}>npm</a>
+                                        <a href={method.feedback}>edit doc</a>
+                                    </ul>
+                                </header>
+                                <div dangerouslySetInnerHTML={{__html: method.content }} />
+                        </div>)
                     )}
                 </div>
             </main>
