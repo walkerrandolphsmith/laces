@@ -150,7 +150,7 @@ class SmartIndexPage extends React.Component {
                                     <ul className="links">
                                         <a href={method.source} target="_blank">source</a>
                                         <a href={method.npm} target="_blank">npm</a>
-                                        <a href={method.feedback} target="_blank">edit doc</a>
+                                        <a href={method.feedback} target="_blank">docs</a>
                                     </ul>
                                 </header>
                                 <div dangerouslySetInnerHTML={{__html: method.content }} />
