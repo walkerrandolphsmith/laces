@@ -75,7 +75,7 @@ export const methods = groups
         ...method,
         source: `https://www.github.com/quillio/stringy/blob/master/packages/${method.name}/index.js`,
         npm: `https://www.npmjs.com/package/@quillio/stringy-${method.name}`,
-        feedback: 'mailto:public@quillio.io'
+        feedback: `https://www.github.com/quillio/stringy/blob/master/packages/${method.name}/README.md`,
     }))
     .reduce(
         (map, method) => ({ ...map, [method.name]: method }),{}

@@ -635,6 +635,8 @@ header.navigation {
 }
 
 header.navigation h1 {
+  display: flex;
+  align-items: center;
   margin: 0;
   color: inherit;
   margin-left: 10px;
@@ -643,10 +645,14 @@ header.navigation h1 {
   line-height: 20px;
 }
 
+header.navigation h1 svg {
+  margin-left: 10px;
+}
+
 header.navigation h1 a {
   color: white;
   text-decoration: none;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 header.navigation .links {
