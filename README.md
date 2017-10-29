@@ -5,6 +5,21 @@ title: quickStart
 
 Stringy is a modern JavaScript string utility library providing modularity and ease of use. 
 
+<div class="social-buttons">
+    <a href="https://twitter.com/Quillio_io" class="btn twitter-follow-btn">
+        <i></i>
+        <span class="label">Follow @quillio</span>
+    </a>
+    <a href="https://github.com/quillio" class="btn gh-follow-btn">
+        <i></i>
+        <span class="label">Follow @quillio</span>
+    </a>
+    <a href="https://github.com/quillio/stringy" class="btn gh-follow-btn">
+        <i></i>
+        <span class="label">Star</span>
+    </a>
+</div>
+
 ### Installation  
 
 Using npm:
