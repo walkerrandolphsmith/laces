@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel ./src --ignore src/**/*.spec.js -d ./dist",
     "test": "ava",
-    "docs": "cd ./docs-src && gatsby develop"
+    "docs": "cd ./docs-src && npm run develop",
+    "deploy:docs": "cd ./docs-src && npm run deploy"
   },
   "repository": {
     "type": "git",

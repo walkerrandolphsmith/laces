@@ -5,6 +5,7 @@ const methodPath = path.resolve(__dirname, '..', 'packages') + '/**/' + 'README.
 console.log(methodPath)
 
 module.exports = {
+  pathPrefix: `/stringy`,
   siteMetadata: {
     title: `Gatsby Default Starter`,
   },
