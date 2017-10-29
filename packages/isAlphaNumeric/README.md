@@ -16,15 +16,15 @@ Determines if a string contains only alpha and/or numeric characters
 
 ### Example
 ```js
-isAlpha('phone')
+isAlphaNumeric('phone')
 // => true
 
-isAlpha('5555555')
+isAlphaNumeric('5555555')
 // => true
 
-isAlpha('phone 5555555')
+isAlphaNumeric('phone 5555555')
 // => true
 
-isAlpha('phone 555-5555')
+isAlphaNumeric('phone 555-5555')
 // => false
 ```

@@ -9,6 +9,7 @@ Determines if a string contains a `pattern` as its final characters
 
 ### Arguments
 * `str` *(string)*: The string to query
+* `pattern` *(string)*: The pattern to match
 
 ### Returns
 *(boolean)*: Returns whether the string ends with the pattern
