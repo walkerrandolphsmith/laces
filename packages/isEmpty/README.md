@@ -1,17 +1,17 @@
 ---
-title: isBlank
+title: isEmpty
 ---
 
 ## isBetween(str)
 
-Determines if a string only contains whitespace characters
+Determines if a string contains no characters
 
 
 ### Arguments
 * `str` *(string)*: The string to query
 
 ### Returns
-*(boolean)*: Returns whether the string only contains whitespace characters
+*(boolean)*: Returns whether the string contains no characters
 
 
 ### Example
@@ -20,11 +20,5 @@ isBlank('')
 // => true
 
 isBlank(' ')
-// => true
-
-isBlank('\n')
-// => true
-
-isBlank('my string')
 // => false
 ```

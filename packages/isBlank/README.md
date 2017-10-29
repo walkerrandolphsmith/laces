@@ -1,33 +1,30 @@
 ---
-title: isBetween
+title: isBlank
 ---
 
-## isBetween(str, [leftPattern=''], [rightPattern=''])
+## isBetween(str)
 
-Determines if a string is surround by `leftPattern` and `rightPattern`
+Determines if a string only contains whitespace characters
 
 
 ### Arguments
 * `str` *(string)*: The string to query
 
 ### Returns
-*(boolean)*: Returns whether the string is surrounded by specified patterns
+*(boolean)*: Returns whether the string only contains whitespace characters
 
 
 ### Example
 ```js
-isBetween('<h2>my string</h2>')
+isBlank('')
 // => true
 
-isBetween('<h2>my string</h2>', '<h2>')
+isBlank(' ')
 // => true
 
-isBetween('<h2>my string</h2>', '<h2>', '</h2>')
+isBlank('\n')
 // => true
 
-isBetween('<h2>my string</h2>', '<p>')
-// => false
-
-isBetween('<h2>my string</h2>', '<p>', '</p>')
+isBlank('my string')
 // => false
 ```

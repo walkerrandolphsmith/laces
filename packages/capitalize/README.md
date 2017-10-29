@@ -1,23 +1,20 @@
 ---
-title: camalize
+title: capitalize
 ---
 
-## camalize(str)
+## capitalize(str)
 
-Creates a `camel cased` string
+Creates a string such that the first character is upper case.
 
 ### Arguments
-`str` *(string)*: The string to camalize
+* `str` *(string)*: The string to capitalize
 
 ### Returns
-*(string)*: Returns the new camalized string
+*(string)*: Returns the new capitalized string
 
 
 ### Example
 ```js
-camalize('my_var')
-// => 'myVar'
-
-camalize('my var')
-// => 'myVar'
+capitalize('this sentence needs capitalization')
+// => 'This sentence needs capitalization'
 ```

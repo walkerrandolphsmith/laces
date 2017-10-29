@@ -1,24 +1,30 @@
 ---
-title: isEmpty
+title: isInteger
 ---
 
-## isBetween(str)
+## isInteger(str)
 
-Determines if a string contains no characters
+Determines if a string is a valid integer
 
 
 ### Arguments
 * `str` *(string)*: The string to query
 
 ### Returns
-*(boolean)*: Returns whether the string contains no characters
+*(boolean)*: Returns whether the string is a valid integer
 
 
 ### Example
 ```js
-isBlank('')
+isInteger('1')
 // => true
 
-isBlank(' ')
+isInteger('-1')
+// => true
+
+isInteger('1.5')
+// => false
+
+isInteger('my string')
 // => false
 ```

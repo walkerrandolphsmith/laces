@@ -1,30 +1,33 @@
 ---
-title: isAlphaNumeric
+title: isBetween
 ---
 
-## isAlphaNumeric(str)
+## isBetween(str, [leftPattern=''], [rightPattern=''])
 
-Determines if a string contains only alpha and/or numeric characters
+Determines if a string is surround by `leftPattern` and `rightPattern`
 
 
 ### Arguments
 * `str` *(string)*: The string to query
 
 ### Returns
-*(boolean)*: Returns whether the string only contains alpha and/or numeric characters
+*(boolean)*: Returns whether the string is surrounded by specified patterns
 
 
 ### Example
 ```js
-isAlpha('phone')
+isBetween('<h2>my string</h2>')
 // => true
 
-isAlpha('5555555')
+isBetween('<h2>my string</h2>', '<h2>')
 // => true
 
-isAlpha('phone 5555555')
+isBetween('<h2>my string</h2>', '<h2>', '</h2>')
 // => true
 
-isAlpha('phone 555-5555')
+isBetween('<h2>my string</h2>', '<p>')
+// => false
+
+isBetween('<h2>my string</h2>', '<p>', '</p>')
 // => false
 ```

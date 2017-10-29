@@ -1,24 +1,24 @@
 ---
-title: collapse
+title: endsWith
 ---
 
-## collapse(str)
+## endsWith(str, pattern)
 
-Remove all whitespace from the string.
+Determines if a string contains a `pattern` as its final characters
 
 
 ### Arguments
-* `str` *(string)*: The string to remove whitespace from
+* `str` *(string)*: The string to query
 
 ### Returns
-*(string)*: Returns a string absent of whitespace
+*(boolean)*: Returns whether the string ends with the pattern
 
 
 ### Example
 ```js
-collapse('my string')
-// => 'mystring'
+endsWith('my string', 'string')
+// => true
 
-collapse('my string\n another line')
-// => 'mystringanotherline'
+collapse('my string', 'missing')
+// => false
 ```

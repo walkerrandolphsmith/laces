@@ -1,24 +1,30 @@
 ---
-title: isAlpha
+title: isAlphaNumeric
 ---
 
-## isAlpha(str)
+## isAlphaNumeric(str)
 
-Determines if a string contains only alpha characters
+Determines if a string contains only alpha and/or numeric characters
 
 
 ### Arguments
 * `str` *(string)*: The string to query
 
 ### Returns
-*(boolean)*: Returns whether the string only contains alpha characters
+*(boolean)*: Returns whether the string only contains alpha and/or numeric characters
 
 
 ### Example
 ```js
-isAlpha('my string')
+isAlpha('phone')
 // => true
 
-isAlpha('555-5555')
+isAlpha('5555555')
+// => true
+
+isAlpha('phone 5555555')
+// => true
+
+isAlpha('phone 555-5555')
 // => false
 ```

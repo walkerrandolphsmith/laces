@@ -1,30 +1,24 @@
 ---
-title: clamp
+title: collapse
 ---
 
-## clamp(str, [length=0], [replaceWith='...'])
+## collapse(str)
 
-Limits the `str` to length no greater than `length`.
-Strings that exceed the `length` limit have `replaceWith` appended to them.
+Remove all whitespace from the string.
 
 
 ### Arguments
-* `str` *(string)*: The string to clamp
-* `length` *(int)*: Maximum length of `str`
-* `replaceWith` *(string)*: pattern to append to strings that exceed the length
+* `str` *(string)*: The string to remove whitespace from
 
 ### Returns
-*(string)*: Returns a string that is limited by the specified `length`.
+*(string)*: Returns a string absent of whitespace
 
 
 ### Example
 ```js
-clamp('my string')
-// => 'my string'
+collapse('my string')
+// => 'mystring'
 
-clamp('really long string', 10)
-// => 'really lon...'
-
-clamp('really long string', 10, '(...)')
-// => 'really lon(...)'
+collapse('my string\n another line')
+// => 'mystringanotherline'
 ```

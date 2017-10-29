@@ -1,27 +1,30 @@
 ---
-title: chompRight
+title: clamp
 ---
 
-## chompRight(str, [pattern=''])
+## clamp(str, [length=0], [replaceWith='...'])
 
-Removes the `pattern` from the right side of `str` 
+Limits the `str` to length no greater than `length`.
+Strings that exceed the `length` limit have `replaceWith` appended to them.
+
 
 ### Arguments
-* `str` *(string)*: The string to query
-* `pattern` *(string)*: string pattern to remove
+* `str` *(string)*: The string to clamp
+* `length` *(int)*: Maximum length of `str`
+* `replaceWith` *(string)*: pattern to append to strings that exceed the length
 
 ### Returns
-*(string)*: Returns string with the removed pattern
+*(string)*: Returns a string that is limited by the specified `length`.
 
 
 ### Example
 ```js
-chompRight('my string')
+clamp('my string')
 // => 'my string'
 
-chompRight('my string', 'my')
-// => 'my string'
+clamp('really long string', 10)
+// => 'really lon...'
 
-chompRight('my string', 'string')
-// => 'my '
+clamp('really long string', 10, '(...)')
+// => 'really lon(...)'
 ```

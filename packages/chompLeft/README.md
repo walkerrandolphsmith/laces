@@ -1,24 +1,27 @@
 ---
-title: charAt
+title: chompLeft
 ---
 
-## charAt(str, [index=0])
+## chompLeft(str, [pattern=''])
 
-Retrieves the character at the specified index within the string. Index is `0` by default. 
+Removes the `pattern` from the left side of `str` 
 
 ### Arguments
 * `str` *(string)*: The string to query
-* `index` *(int)*: The index of the string
+* `pattern` *(string)*: string pattern to remove
 
 ### Returns
-*(string)*: Returns the character at the specified index
+*(string)*: Returns string with the removed pattern
 
 
 ### Example
 ```js
-charAt('my string')
-// => 'm'
+chompLeft('my string')
+// => 'my string'
 
-charAt('my string', 3)
-// => 's'
+chompLeft('my string', 'my')
+// => ' string'
+
+chompLeft('my string', 'string')
+// => 'my string'
 ```

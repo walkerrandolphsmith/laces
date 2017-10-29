@@ -1,20 +1,24 @@
 ---
-title: capitalize
+title: charAt
 ---
 
-## capitalize(str)
+## charAt(str, [index=0])
 
-Creates a string such that the first character is upper case.
+Retrieves the character at the specified index within the string. Index is `0` by default. 
 
 ### Arguments
-`str` *(string)*: The string to capitalize
+* `str` *(string)*: The string to query
+* `index` *(int)*: The index of the string
 
 ### Returns
-*(string)*: Returns the new capitalized string
+*(string)*: Returns the character at the specified index
 
 
 ### Example
 ```js
-capitalize('this sentence needs capitalization')
-// => 'This sentence needs capitalization'
+charAt('my string')
+// => 'm'
+
+charAt('my string', 3)
+// => 's'
 ```

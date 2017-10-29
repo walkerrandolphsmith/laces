@@ -1,10 +1,10 @@
 ---
-title: chompLeft
+title: chompRight
 ---
 
-## chompLeft(str, [pattern=''])
+## chompRight(str, [pattern=''])
 
-Removes the `pattern` from the left side of `str` 
+Removes the `pattern` from the right side of `str` 
 
 ### Arguments
 * `str` *(string)*: The string to query
@@ -16,9 +16,12 @@ Removes the `pattern` from the left side of `str`
 
 ### Example
 ```js
-chompLeft('my string')
+chompRight('my string')
 // => 'my string'
 
-charAt('my string', 'my')
-// => ' string'
+chompRight('my string', 'my')
+// => 'my string'
+
+chompRight('my string', 'string')
+// => 'my '
 ```

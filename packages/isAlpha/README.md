@@ -1,24 +1,24 @@
 ---
-title: endsWith
+title: isAlpha
 ---
 
-## endsWith(str, pattern)
+## isAlpha(str)
 
-Determines if a string contains a `pattern` as its final characters
+Determines if a string contains only alpha characters
 
 
 ### Arguments
 * `str` *(string)*: The string to query
 
 ### Returns
-*(boolean)*: Returns whether the string ends with the pattern
+*(boolean)*: Returns whether the string only contains alpha characters
 
 
 ### Example
 ```js
-endsWith('my string', 'string')
+isAlpha('my string')
 // => true
 
-collapse('my string', 'missing')
+isAlpha('555-5555')
 // => false
 ```
