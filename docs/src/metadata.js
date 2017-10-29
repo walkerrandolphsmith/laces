@@ -59,6 +59,12 @@ export const groups = [
             'toWords',
         ]
     },
+    {
+        header: 'Wrap',
+        items: [
+            'chain'
+        ]
+    },
 ];
 
 
