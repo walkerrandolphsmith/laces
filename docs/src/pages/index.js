@@ -146,9 +146,9 @@ class SmartIndexPage extends React.Component {
                                 <header>
                                     <h3 className="signature" id={method.name}>{method.name}</h3>
                                     <ul className="links">
-                                        <a href={method.source}>source</a>
-                                        <a href={method.npm}>npm</a>
-                                        <a href={method.feedback}>edit doc</a>
+                                        <a href={method.source} target="_blank">source</a>
+                                        <a href={method.npm} target="_blank">npm</a>
+                                        <a href={method.feedback} target="_blank">edit doc</a>
                                     </ul>
                                 </header>
                                 <div dangerouslySetInnerHTML={{__html: method.content }} />
