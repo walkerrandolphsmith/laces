@@ -1,7 +1,59 @@
 import React from 'react'
-import List from './../components/List';
-import Method from './../components/Method';
 import { groups, generateMethods } from './../metadata';
+
+
+const Item = ({ text }) => {
+    const href = `#${text}`;
+    return (
+        <li className="function"><a className="internal" href={href}>{text}</a></li>
+    )
+};
+
+const Group = ({ header, items, className, toggle }) => (
+    <div className={className}>
+        <i className="expander" onClick={toggle} />
+        <h2>{header}</h2>
+        <ul className="functions">
+            {items.map(
+                (item, i) => (<Item key={i} text={item} />)
+            )}
+        </ul>
+    </div>
+);
+
+class SmartGroup extends React.Component {
+    constructor(props, context) {
+        super(props, context);
+        this.state = { isExpanded: true };
+        this.toggle = this.toggle.bind(this);
+    }
+
+    toggle() {
+        this.setState({ isExpanded: !this.state.isExpanded })
+    }
+
+    render() {
+        const className = `group ${this.state.isExpanded ? 'expanded' : ''}`;
+        return <Group
+            {...this.props}
+            toggle={this.toggle}
+            className={className}
+        />
+    }
+}
+
+const List = (props) => {
+    return props.hasResult ? (
+        <div className="list">
+            {props.groups.map(
+                (group, i) => (<SmartGroup key={i} {...group} />)
+            )}
+        </div>
+    ) :(
+        <span>Sorry no results</span>
+    )
+};
+
 
 class SmartIndexPage extends React.Component {
     constructor(props, context) {
@@ -88,7 +140,11 @@ class SmartIndexPage extends React.Component {
                 </aside>
                 <div className="content">
                     {this.state.methods.map(
-                        (method, i) => (<Method key={i} {...method} />)
+                        (method, i) => (<div
+                            key={i}
+                            className="method"
+                            dangerouslySetInnerHTML={{__html: method.content }}
+                        />)
                     )}
                 </div>
             </main>
