@@ -1,7 +1,7 @@
 {
   "name": "@quillio/stringy",
   "version": "1.1.0",
-  "description": "Escape css selectors of special characters",
+  "description": "Common string utilties written in JavaScript",
   "main": "index.js",
   "scripts": {
     "build": "babel ./src --ignore src/**/*.spec.js -d ./dist",
@@ -15,9 +15,12 @@
   },
   "keywords": [
     "javascript",
-    "strings"
+    "strings",
+    "string",
+    "library",
+    "lib"
   ],
-  "author": "walkerrandolphsmith@gmail.com",
+  "author": "public@quillio.io",
   "contributors": [
     "walkerrandolphsmith@gmail.com"
   ],

@@ -1,8 +1,12 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "private": true,
+  "name": "@quillio/stringy-docs-site",
+  "description": "Documentation for stringy library",
+  "version": "0.0.1",
+  "author": "public@quillio.io",
+  "contributors": [
+    "walkerrandolphsmith@gmail.com"
+  ],
   "dependencies": {
     "gatsby": "^1.9.73",
     "gatsby-link": "^1.6.22",
@@ -11,7 +15,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
+  "license": "ISC",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
