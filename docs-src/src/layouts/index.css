@@ -987,12 +987,12 @@ pre[class*="language-"] {
 .token.tag,
 .token.operator,
 .token.number {
-  color: #063289;
+  color: white;
 }
 
 .token.property,
 .token.function {
-  color: #b29762;
+  color: #79b6f2;
 }
 
 .token.tag-id,
@@ -1023,7 +1023,7 @@ code.language-scss,
 .token.statement,
 .token.regex,
 .token.atrule {
-  color: #728fcb;
+  color: #8dc891;
 }
 
 .token.placeholder,
