@@ -70,6 +70,7 @@ class SmartIndexPage extends React.Component {
         this.onKeyDown = this.onKeyDown.bind(this);
         this.clear = this.clear.bind(this);
         this.focus = this.focus.bind(this);
+        this.scrollToTop = this.scrollToTop.bind(this);
     }
 
     componentDidMount() {
@@ -121,6 +122,10 @@ class SmartIndexPage extends React.Component {
         });
     }
 
+    scrollToTop() {
+        this.content.scrollTo(0, 0);
+    }
+
     render() {
         return (
             <main>
@@ -139,7 +144,7 @@ class SmartIndexPage extends React.Component {
                     </div>
                     <List {...this.state} />
                 </aside>
-                <div className="content">
+                <div className="content" ref={(content) => this.content = content}>
                     <div className="quick-start" dangerouslySetInnerHTML={{ __html: this.state.quickStart }} />
                     {this.state.methods.map(
                         (method, i) => (<div
@@ -157,6 +162,12 @@ class SmartIndexPage extends React.Component {
                         </div>)
                     )}
                 </div>
+                <button
+                    className="top-of-page"
+                    onClick={this.scrollToTop}
+                >
+                    <i className="chevron" />
+                </button>
             </main>
         )
     }
