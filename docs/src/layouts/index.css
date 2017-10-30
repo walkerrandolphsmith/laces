@@ -166,6 +166,10 @@ li > p {
   }
 }
 
+.gitter-open-chat-button {
+  display: none;
+}
+
 .gitter-btn {
   background: transparent;
   outline: none;
