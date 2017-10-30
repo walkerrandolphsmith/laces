@@ -1,6 +1,7 @@
 import React from 'react'
 import { groups, generateMethods, generateQuickStart } from './../metadata';
 import Link from 'gatsby-link'
+import enhanceWithClickOutside from 'react-click-outside';
 
 const Logo = () => (
     <h1>
@@ -90,6 +91,25 @@ const List = (props) => {
     )
 };
 
+class GitterAside extends React.Component {
+    constructor(props, context) {
+        super(props, context);
+        this.handleClickOutside = this.handleClickOutside.bind(this);
+    }
+
+    handleClickOutside() {
+        this.props.closeGitterAside();
+    }
+
+    render() {
+        return (
+            <div className={this.props.className} />
+        )
+    }
+}
+
+const SmartGitterAside = enhanceWithClickOutside(GitterAside);
+
 
 class SmartIndexPage extends React.Component {
     constructor(props, context) {
@@ -110,10 +130,15 @@ class SmartIndexPage extends React.Component {
         this.focus = this.focus.bind(this);
         this.scrollToTop = this.scrollToTop.bind(this);
         this.openGitterAside = this.openGitterAside.bind(this);
+        this.closeGitterAside = this.closeGitterAside.bind(this);
+        this.onWindowKeyDown = this.onWindowKeyDown.bind(this);
     }
 
     componentDidMount() {
         this.focus();
+
+        window.addEventListener('keydown', this.onWindowKeyDown);
+
         ((window.gitter = {}).chat = {}).options = {
             room: 'quillio-io/Lobby',
             activationElement: '.gitter-btn',
@@ -121,11 +146,13 @@ class SmartIndexPage extends React.Component {
             targetElement: '.gitter-sidebar'
         };
 
-        document.querySelector('.gitter-sidebar').addEventListener('gitter-chat-toggle', (e) => {
-            if(!e.detail.state) {
-                this.setState({ isOpen: false })
-            }
-        });
+        document
+            .querySelector('.gitter-sidebar')
+            .addEventListener('gitter-chat-toggle', (e) => {
+                if(!e.detail.state) {
+                    this.closeGitterAside()
+                }
+            });
     }
 
     focus() {
@@ -181,9 +208,12 @@ class SmartIndexPage extends React.Component {
         this.setState({ isOpen: true })
     }
 
+    closeGitterAside() {
+        this.setState({ isOpen: false })
+    }
+
     render() {
         const gitterAsideClassName = 'gitter-sidebar ' + (this.state.isOpen ? 'open' : 'closed');
-        console.log(gitterAsideClassName)
         return (
             <div>
                 <header className="navigation">
@@ -243,7 +273,10 @@ class SmartIndexPage extends React.Component {
                     >
                         <i className="chevron" />
                     </button>
-                    <div className={gitterAsideClassName} />
+                    <SmartGitterAside
+                        className={gitterAsideClassName}
+                        closeGitterAside={this.closeGitterAside}
+                    />
                 </main>
             </div>
         )
