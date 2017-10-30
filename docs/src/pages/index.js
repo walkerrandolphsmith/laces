@@ -180,6 +180,17 @@ class SmartIndexPage extends React.Component {
         });
     }
 
+    onWindowKeyDown(event) {
+        const isF = event.keyCode === 70;
+        if (isF && (event.ctrlKey || event.metaKey)) {
+            this.focus();
+        }
+
+        if(event.keyCode === 27 && this.state.isOpen) {
+            this.closeGitterAside()
+        }
+    }
+
     onKeyDown(event) {
         if(!this.state.hasResult) return;
 
