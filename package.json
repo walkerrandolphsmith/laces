@@ -4,10 +4,12 @@
   "description": "Common string utilties written in JavaScript",
   "main": "index.js",
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "build": "babel ./src --ignore src/**/*.spec.js -d ./dist",
     "test": "ava",
     "docs": "cd ./docs && npm run develop",
-    "deploy:docs": "cd ./docs && npm run deploy"
+    "deploy:docs": "cd ./docs && npm run deploy",
+    "postinstall": "npm run bootstrap"
   },
   "repository": {
     "type": "git",
