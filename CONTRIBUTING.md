@@ -7,8 +7,7 @@ First Time? Get up a running:
 ```
 git clone git@github.com:quillio/stringy.git
 cd ./stringy
-npm i -g lerna
-lerna boostrap
+npm install
 ```
 
 ## Working on a module
@@ -21,7 +20,7 @@ that:
 
 When working on one of the modules make it your current directory.
 From the modules directory we can run commands specifically for that module like:
-1. Adding new npm dependencies with `yarn add <new-package>`
+1. Adding new npm dependencies with `npm install <new-package> --save`
  
 ### Commands
 
