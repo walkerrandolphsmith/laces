@@ -1,0 +1,29 @@
+{
+  "name": "@quillio/stringy-isMatch",
+  "version": "0.0.1",
+  "description": "Collection of common string validators",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "cd ./../../ && source build.sh && build isMatch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quillio/validators.git"
+  },
+  "keywords": [
+    "javascript",
+    "validators-functions"
+  ],
+  "author": "admin@quillio.io",
+  "contributors": [
+    "walkerrandolphsmith@gmail.com"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quillio/validators/issues"
+  },
+  "homepage": "https://github.com/quillio/validators#readme",
+  "dependencies": {
+
+  }
+}

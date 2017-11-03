@@ -1,30 +1,25 @@
 ---
-title: isInteger
+title: isMatch
 ---
 
-## isInteger(str)
+## isMatch(subject, compareTo)
 
-Determines if a string is a valid integer
+Constant time equality comparision of two strings
 
 
 ### Arguments
-* `str` *(string)*: The string to query
+* `reference` *(string)*: A string
+* `compareTo` *(string)*: The string to compare
 
 ### Returns
-*(boolean)*: Returns whether the string is a valid integer
+*(boolean)*: Returns whether the two strings are the same
 
 
 ### Example
 ```js
-isInteger('1')
+isMatch('password', 'password')
 // => true
 
-isInteger('-1')
-// => true
-
-isInteger('1.5')
-// => false
-
-isInteger('my string')
+isMatch('password', 'wrong')
 // => false
 ```

@@ -38,6 +38,7 @@
     "@quillio/stringy-isBlank": "0.0.1",
     "@quillio/stringy-isEmpty": "0.0.1",
     "@quillio/stringy-isInteger": "0.0.1",
+    "@quillio/stringy-isMatch": "0.0.1",
     "@quillio/stringy-isNaturalNumber": "0.0.1",
     "@quillio/stringy-isNumeric": "0.0.1",
     "@quillio/stringy-isReal": "0.0.1",

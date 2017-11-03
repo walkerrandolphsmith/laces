@@ -12,6 +12,7 @@ import isBetween from '@quillio/stringy-isBetween';
 import isBlank from '@quillio/stringy-isBlank';
 import isEmpty from '@quillio/stringy-isEmpty';
 import isInteger from '@quillio/stringy-isInteger';
+import isMatch from '@quillio/stringy-isMatch';
 import isNaturalNumber from '@quillio/stringy-isNaturalNumber';
 import isNumeric from '@quillio/stringy-isNumeric';
 import isReal from '@quillio/stringy-isReal';
@@ -85,6 +86,7 @@ const queries = {
     isBlank,
     isEmpty,
     isInteger,
+    isMatch,
     isNaturalNumber,
     isNumeric,
     isReal,
