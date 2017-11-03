@@ -197,8 +197,7 @@ class SmartIndexPage extends React.Component {
         const isEnter = event.which === 13 || event.keyCode === 13;
 
         if(isEnter) {
-            const fn = this.state.groups[0].items[0];
-            window.location = `/#${fn}`;
+            window.hash = this.state.groups[0].items[0];
             this.focus();
         }
     }
