@@ -16,9 +16,9 @@ Determines if a string contains no characters
 
 ### Example
 ```js
-isBlank('')
+isEmpty('')
 // => true
 
-isBlank(' ')
+isEmpty(' ')
 // => false
 ```
