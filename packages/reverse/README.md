@@ -4,7 +4,7 @@ title: reverse
 
 ## reverse(str)
 
-Reverse the order of the characters of the string. 
+Reverse the order of the characters of the string. Handles surrogate pairs!
 
 
 ### Arguments
@@ -19,6 +19,6 @@ Reverse the order of the characters of the string.
 replace('my string')
 // => 'gnirts ym'
 
-replace('racecar')
-// => 'racecar'
+replace('mañana mañana')
+// => 'anañam anañam'
 ```
