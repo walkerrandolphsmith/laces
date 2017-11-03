@@ -9,6 +9,7 @@ export const groups = [
             'isBlank',
             'isEmpty',
             'isInteger',
+            'isMatch',
             'isNaturalNumber',
             'isNumeric',
             'isReal',
