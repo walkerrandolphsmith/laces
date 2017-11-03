@@ -1,7 +1,7 @@
 {
   "name": "@quillio/stringy-isEmpty",
   "version": "0.0.1",
-  "description": "Collection of common data structures",
+  "description": "Colletion of string utilities in javascript",
   "main": "dist/index.js",
   "scripts": {
     "build": "cd ./../../ && source build.sh && build isEmpty"
