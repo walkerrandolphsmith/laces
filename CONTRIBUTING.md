@@ -3,30 +3,33 @@
 [![GitHub issues][issues-badge]][issues]
 [![Stories in Ready][waffle-badge]][waffle]
 
+## Contributor License Agreement
+Coming soon. Thanks for your patience.
+
+## Getting Started
 First Time? Get up a running:
 ```
 git clone git@github.com:quillio/stringy.git
 cd ./stringy
 npm install
 ```
-
-## Working on a module
 This repository is divided into multiple scoped npm packages. That means
-that each directory under the `packages` directory is an independent module
-that:
+that each directory under the `packages` directory is an independent npm package
 1. Is published as its own module on NPM
 2. Should never import any part of a sibling module by file path
 3. Never be published independently
 
-When working on one of the modules make it your current directory.
-From the modules directory we can run commands specifically for that module like:
-1. Adding new npm dependencies with `npm install <new-package> --save`
+Add dependencies to a package by making `/packages/<package-in-progress>` your working directory and run the following command:
+```npm install <new-package> --save```
  
-### Commands
+### Coding guidelines
 
-Run the specs
-`npm t`
-
+* **Tests**:  
+Functions should be unit tested and bug fixes should include unit tests that exercise the broken functionality. Hopefully it can help drive the design of a function as well. Tests can be verified with `npm run test`
+* **Comments**:  
+Functions should include JSDoc Tag comments.
+* **Coding Style**:  
+Coding style is established in the lint configuration and can be verified with `npm run lint`
 
 [ci]: https://travis-ci.org/Quillio/stringy
 [ci-badge]: https://travis-ci.org/Quillio/stringy.svg?branch=master
