@@ -6,6 +6,9 @@
 ## Contributor License Agreement
 Coming soon. Thanks for your patience.
 
+## Feature Requests
+Submit features  requests and issues to the [issue tracker](https://github.com/quillio/stringy/issues). Please search for similar requests within the [closed issues](https://github.com/quillio/stringy/issues?q=is%3Aissue+is%3Aclosed) before submitting a new request.
+
 ## Getting Started
 First Time? Get up a running:
 ```
@@ -27,7 +30,7 @@ Add dependencies to a package by making `/packages/<package-in-progress>` your w
 * **Tests**:  
 Functions should be unit tested and bug fixes should include unit tests that exercise the broken functionality. Hopefully it can help drive the design of a function as well. Tests can be verified with `npm run test`
 * **Comments**:  
-Functions should include JSDoc Tag comments.
+Functions should include JSDoc-style comments.
 * **Coding Style**:  
 Coding style is established in the lint configuration and can be verified with `npm run lint`
 
