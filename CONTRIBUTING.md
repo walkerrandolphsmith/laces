@@ -15,6 +15,7 @@ First Time? Get up a running:
 git clone git@github.com:quillio/stringy.git
 cd ./stringy
 npm install
+npm run boostrap
 ```
 This repository is divided into multiple scoped npm packages. That means
 that each directory under the `packages` directory is an independent npm package

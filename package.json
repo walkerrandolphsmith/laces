@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "build": "babel ./src --ignore src/**/*.spec.js -d ./dist",
+    "clean": "lerna clean --yes",
+    "nuke": "npm run clean && lerna exec -- rm -rf ./dist",
+    "build": "lerna run build",
     "lint": "eslint -c .eslintrc packages",
     "test": "ava",
     "bundlesize": "bundlesize",
