@@ -1,0 +1,29 @@
+{
+  "name": "@quillio/stringy-escapeHtml",
+  "version": "0.0.1",
+  "description": "Colletion of string utilities in javascript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "cd ./../../ && source build.sh && build escapeHtml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quillio/stringy.git"
+  },
+  "keywords": [
+    "javascript",
+    "escapeHtml"
+  ],
+  "author": "admin@quillio.io",
+  "contributors": [
+    "walkerrandolphsmith@gmail.com"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quillio/stringy/issues"
+  },
+  "homepage": "https://github.com/quillio/stringy#readme",
+  "dependencies": {
+
+  }
+}

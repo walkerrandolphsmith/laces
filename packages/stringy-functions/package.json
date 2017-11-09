@@ -32,6 +32,8 @@
     "@quillio/stringy-clamp": "0.0.1",
     "@quillio/stringy-collapse": "0.0.1",
     "@quillio/stringy-endsWith": "0.0.1",
+    "@quillio/stringy-escapeHtml": "0.0.1",
+    "@quillio/stringy-escapeRegex": "0.0.1",
     "@quillio/stringy-isAlpha": "0.0.1",
     "@quillio/stringy-isAlphaNumeric": "0.0.1",
     "@quillio/stringy-isBetween": "0.0.1",

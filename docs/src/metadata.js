@@ -26,6 +26,7 @@ export const groups = [
             'chompRight',
             'clamp',
             'collapse',
+            'escapeHtml',
             'escapeRegex',
             'latinise',
             'padLeft',

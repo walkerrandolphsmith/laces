@@ -6,6 +6,8 @@ import chompRight from '@quillio/stringy-chompRight';
 import clamp from '@quillio/stringy-clamp';
 import collapse from '@quillio/stringy-collapse';
 import endsWith from '@quillio/stringy-endsWith';
+import escapeHtml from '@quillio/stringy-escapeHtml';
+import escapeRegex from '@quillio/stringy-escapeRegex';
 import isAlpha from '@quillio/stringy-isAlpha';
 import isAlphaNumeric from '@quillio/stringy-isAlphaNumeric';
 import isBetween from '@quillio/stringy-isBetween';
@@ -53,6 +55,8 @@ export const manipulations = {
   chompRight,
   clamp,
   collapse,
+  escapeHtml,
+  escapeRegex,
   latinise,
   padLeft,
   padRight,
