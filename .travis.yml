@@ -6,5 +6,6 @@ install:
 script:
   - lerna bootstrap
   - npm t
+  - npm run lint
 after_success:
   - coveralls
