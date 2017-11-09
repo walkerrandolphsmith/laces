@@ -6,6 +6,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "babel ./src --ignore src/**/*.spec.js -d ./dist",
+    "lint": "eslint -c .eslintrc packages",
     "test": "ava",
     "docs": "cd ./docs && npm run develop",
     "deploy:docs": "cd ./docs && npm run deploy",
@@ -42,6 +43,10 @@
     "babel-preset-stage-1": "^6.5.0",
     "babel-preset-stage-2": "^6.5.0",
     "babel-preset-stage-3": "^6.5.0",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
     "lerna": "^2.0.0-rc.4",
     "uglify-js": "^3.1.0"
   },

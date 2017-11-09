@@ -1,1 +1,1 @@
-export default (string, amount=0) => Array.from(Array(amount), (_, i) => string).reduce((ns, char) => ns + char, '');
+export default (string, amount = 0) => Array.from(Array(amount), () => string).reduce((ns, char) => ns + char, '');

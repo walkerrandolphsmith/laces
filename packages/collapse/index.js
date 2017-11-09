@@ -1,1 +1,1 @@
-export default (string) => string.replace(/\s/g, '')
+export default string => string.replace(/\s/g, '');

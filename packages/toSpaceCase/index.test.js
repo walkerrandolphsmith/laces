@@ -10,3 +10,4 @@ test('from kebab case', t => t.is(sut('my-other-var'), 'my other var'));
 test('from camel case', t => t.is(sut('myOtherVar'), 'my other var'));
 
 test('mixed', t => t.is(sut('camelVar my other var'), 'camel var my other var'));
+

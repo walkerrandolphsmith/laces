@@ -1,1 +1,1 @@
-export default (string) => string.split('')
+export default string => string.split('');
