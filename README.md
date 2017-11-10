@@ -66,8 +66,8 @@ To contribute please read the
 [npm-dev-deps]: https://david-dm.org/quillio/stringy?type=dev
 [npm-dev-deps-badge]: https://david-dm.org/quillio/stringy/dev-status.svg
 
-[code-cov]: https://coveralls.io/github/Quillio/stringy
-[code-cov-badge]: https://coveralls.io/repos/github/Quillio/stringy/badge.svg
+[code-cov]: https://coveralls.io/github/Quillio/stringy?branch=maste
+[code-cov-badge]: https://coveralls.io/repos/github/Quillio/stringy/badge.svg?branch=master
 
 [code-style]: https://github.com/airbnb/javascript
 [code-style-badge]: https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg
