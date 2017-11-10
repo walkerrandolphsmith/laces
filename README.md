@@ -18,11 +18,6 @@ Stringy is a modern JavaScript string utility library providing modularity and e
 </div>
 <br>
 
-[![npm][npm-badge]][npm]
-[![Build Status][ci-badge]][ci]
-[![Code Coverage][code-cov-badge]][code-cov]
-[![GitHub issues][issues-badge]][issues]
-[![Stories in Ready][waffle-badge]][waffle]
 
 ### Installation  
 

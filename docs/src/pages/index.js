@@ -110,7 +110,6 @@ class GitterAside extends React.Component {
 
 const SmartGitterAside = enhanceWithClickOutside(GitterAside);
 
-
 class SmartIndexPage extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -132,10 +131,13 @@ class SmartIndexPage extends React.Component {
         this.openGitterAside = this.openGitterAside.bind(this);
         this.closeGitterAside = this.closeGitterAside.bind(this);
         this.onWindowKeyDown = this.onWindowKeyDown.bind(this);
+        this.removeHash = this.removeHash.bind(this);
     }
 
     componentDidMount() {
         this.focus();
+        this.content = document.getElementsByClassName('content')[0];
+        this.aside = document.getElementsByTagName('aside')[0];
 
         window.addEventListener('keydown', this.onWindowKeyDown);
 
@@ -153,6 +155,28 @@ class SmartIndexPage extends React.Component {
                     this.closeGitterAside()
                 }
             });
+
+        window.onpopstate = history.onpushstate = (e) => {
+            const path = location.hash.split('#')[1];
+            if(path) {
+                const elm = document.getElementById(path);
+                this.content.scrollTop = elm.offsetTop - 50;
+            } else {
+                this.content.scrollTop = 0;
+                this.aside.scrollTop = 0;
+            }
+        }
+    }
+
+    removeHash () {
+        let loc = window.location;
+        if ('pushState' in history) {
+            history.pushState("", document.title, loc.pathname + loc.search);
+        } else {
+            loc.hash = "";
+        }
+        this.content.scrollTop = 0;
+        this.aside.scrollTop = 0;
     }
 
     focus() {
@@ -197,7 +221,7 @@ class SmartIndexPage extends React.Component {
         const isEnter = event.which === 13 || event.keyCode === 13;
 
         if(isEnter) {
-            location.hash = this.state.groups[0].items[0];
+            //updateHash(this.state.groups[0].items[0]);
             this.focus();
         }
     }
@@ -212,6 +236,7 @@ class SmartIndexPage extends React.Component {
 
     scrollToTop() {
         this.content.scrollTo(0, 0);
+        this.removeHash();
     }
 
     openGitterAside() {
