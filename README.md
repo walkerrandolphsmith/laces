@@ -20,6 +20,7 @@ Stringy is a modern JavaScript string utility library providing modularity and e
 
 [![npm][npm-badge]][npm]
 [![dependencies Status][npm-deps-badge]][npm-deps]
+[![devDependencies Status][npm-dev-deps-badge]][npm-dev-deps]
 [![Build Status][ci-badge]][ci]
 [![Code Coverage][code-cov-badge]][code-cov]
 [![GitHub issues][issues-badge]][issues]
@@ -63,6 +64,9 @@ To contribute please read the
 
 [npm-deps]: https://david-dm.org/quillio/stringy
 [npm-deps-badge]: https://david-dm.org/quillio/stringy/status.svg
+
+[npm-dev-deps]: https://david-dm.org/quillio/stringy?type=dev
+[npm-dev-deps-badge]: https://david-dm.org/quillio/stringy/dev-status.svg
 
 [code-cov]: https://coveralls.io/github/Quillio/stringy
 [code-cov-badge]: https://coveralls.io/repos/github/Quillio/stringy/badge.svg
