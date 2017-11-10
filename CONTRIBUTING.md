@@ -1,7 +1,10 @@
 # Contributing
+[![npm][npm-image]][npm-url]
 [![Build Status][ci-badge]][ci]
 [![GitHub issues][issues-badge]][issues]
 [![Stories in Ready][waffle-badge]][waffle]
+
+
 
 ## Contributor License Agreement
 Coming soon. Thanks for your patience.
@@ -42,3 +45,6 @@ Coding style is established in the lint configuration and can be verified with `
 
 [waffle]: http://waffle.io/Quillio/stringy
 [waffle-badge]: https://img.shields.io/waffle/label/Quillio/stringy.svg
+
+[npm-image]: https://img.shields.io/npm/v/stringy.svg?style=flat
+[npm-url]: https://www.npmjs.com/package/@quillio/stringy
