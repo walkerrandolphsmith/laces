@@ -3,6 +3,7 @@
 node_modules/
 *.log
 **/dist/
+docs.json
 
 coverage
 .nyc_output

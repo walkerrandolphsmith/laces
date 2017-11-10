@@ -12,6 +12,7 @@
     "test": "nyc ava",
     "report": "nyc report --reporter=html",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "docs": "inchjs list --all",
     "bundlesize": "bundlesize",
     "start": "cd ./docs && npm run develop",
     "deploy:docs": "cd ./docs && npm run deploy",
@@ -58,6 +59,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
     "gulp-uglify": "^3.0.0",
+    "inchjs": "^0.4.1",
     "lerna": "^2.0.0-rc.4",
     "nyc": "^11.3.0",
     "uglify-js": "^3.1.0"

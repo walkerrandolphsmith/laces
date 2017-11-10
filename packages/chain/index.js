@@ -1,14 +1,20 @@
 import { manipulations as functions } from '@quillio/stringy-functions';
 
 /**
+ * @typedef {object} Chain
+ * @property {Array<function>}  wrappedFns - Stringy functions.
+ * @property {function}  value - Function to return wrapped string
+ */
+
+/**
  * Creates a fluent interface to chain stringy operations together.
- * Escape the wrapper by invoking `value` and retrieve the wrapped string.
  * @requires module:@quillio/stringy-functions
  * @param {string} string - The string to chain operations from.
- * @returns {string} Returns chain function
+ * @returns {Chain} Returns Chain
  * @example
  * // returns 'my string'
- * chain('my string').value();
+ * chain('my string')
+ *      .value();
  * @example
  * // returns 'MyStringMyString'
  * chain('my string')
@@ -38,6 +44,7 @@ export default function (string) {
 
   return {
     ...wrappedFns,
+    // value returns the wrapped string
     value: () => s,
   };
 }
