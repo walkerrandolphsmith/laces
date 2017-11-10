@@ -18,6 +18,7 @@ Stringy is a modern JavaScript string utility library providing modularity and e
 </div>
 <br>
 
+[![License: MIT][license-badge]][license]
 [![npm][npm-badge]][npm]
 [![dependencies Status][npm-deps-badge]][npm-deps]
 [![devDependencies Status][npm-dev-deps-badge]][npm-dev-deps]
@@ -70,3 +71,7 @@ To contribute please read the
 
 [code-style]: https://github.com/airbnb/javascript
 [code-style-badge]: https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg
+
+[license]: https://opensource.org/licenses/MIT
+[license-badge]: https://img.shields.io/badge/License-MIT-brightgreen.svg
+
