@@ -18,5 +18,5 @@
  * isBetween('my string', '', 'eng');
  */
 export default (string, leftPattern = '', rightPattern = '') => (
-    string.indexOf(leftPattern) > -1 && string.indexOf(rightPattern) > -1
+  string.indexOf(leftPattern) > -1 && string.indexOf(rightPattern) > -1
 );
