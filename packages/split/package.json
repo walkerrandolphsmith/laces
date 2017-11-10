@@ -2,7 +2,7 @@
   "name": "@quillio/stringy-split",
   "version": "0.0.1",
   "description": "Colletion of string utilities in javascript",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "cd ./../../ && source build.sh && build split"
   },

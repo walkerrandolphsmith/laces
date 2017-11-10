@@ -2,7 +2,7 @@
   "name": "@quillio/stringy-isMatch",
   "version": "0.0.1",
   "description": "Collection of common string validators",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "cd ./../../ && source build.sh && build isMatch"
   },

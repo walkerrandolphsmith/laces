@@ -2,9 +2,9 @@ language: node_js
 node_js:
   - "8"
 install:
-  - yarn install
+  - npm install
 script:
-  - lerna bootstrap
+  - npm run link
   - npm t
   - npm run lint
   - npm run build

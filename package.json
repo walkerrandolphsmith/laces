@@ -4,7 +4,7 @@
   "description": "Common string utilties written in JavaScript",
   "main": "index.js",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "link": "lerna bootstrap",
     "clean": "lerna clean --yes",
     "nuke": "npm run clean && lerna exec -- rm -rf ./dist",
     "build": "lerna run build",
