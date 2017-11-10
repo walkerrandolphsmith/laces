@@ -11,6 +11,7 @@
     "lint": "eslint -c .eslintrc packages",
     "test": "nyc ava",
     "report": "nyc report --reporter=html",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "bundlesize": "bundlesize",
     "start": "cd ./docs && npm run develop",
     "deploy:docs": "cd ./docs && npm run deploy",

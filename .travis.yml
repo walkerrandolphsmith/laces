@@ -9,4 +9,4 @@ script:
   - npm run build
   - npm run bundlesize
 after_success:
-  - 'npx nyc report --reporter=text-lcov | npx coveralls'
+  - npm run coverage
