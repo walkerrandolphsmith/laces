@@ -1,11 +1,4 @@
 # Contributing
-[![npm][npm-badge]][npm]
-[![Build Status][ci-badge]][ci]
-[![Code Coverage][code-cov-badge]][code-cov]
-[![GitHub issues][issues-badge]][issues]
-[![Stories in Ready][waffle-badge]][waffle]
-
-
 
 ## Contributor License Agreement
 Coming soon. Thanks for your patience.
@@ -37,18 +30,3 @@ Functions should be unit tested and bug fixes should include unit tests that exe
 Functions should include JSDoc-style comments.
 * **Coding Style**:  
 Coding style is established in the lint configuration and can be verified with `npm run lint`
-
-[ci]: https://travis-ci.org/Quillio/stringy
-[ci-badge]: https://travis-ci.org/Quillio/stringy.svg?branch=master
-
-[issues]: https://github.com/Quillio/stringy/issues
-[issues-badge]: https://img.shields.io/github/issues/Quillio/stringy.svg
-
-[waffle]: http://waffle.io/Quillio/stringy
-[waffle-badge]: https://img.shields.io/waffle/label/Quillio/stringy.svg
-
-[npm]: https://www.npmjs.com/package/@quillio/stringy
-[npm-badge]: https://img.shields.io/npm/v/stringy.svg?style=flat
-
-[code-cov]: https://coveralls.io/github/Quillio/stringy
-[code-cov-badge]: https://coveralls.io/repos/github/Quillio/stringy/badge.svg
