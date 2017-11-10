@@ -1,6 +1,7 @@
 # Contributing
-[![npm][npm-image]][npm-url]
+[![npm][npm-badge]][npm]
 [![Build Status][ci-badge]][ci]
+[![Code Coverage][code-cov-badge]][code-cov]
 [![GitHub issues][issues-badge]][issues]
 [![Stories in Ready][waffle-badge]][waffle]
 
@@ -46,5 +47,9 @@ Coding style is established in the lint configuration and can be verified with `
 [waffle]: http://waffle.io/Quillio/stringy
 [waffle-badge]: https://img.shields.io/waffle/label/Quillio/stringy.svg
 
-[npm-image]: https://img.shields.io/npm/v/stringy.svg?style=flat
-[npm-url]: https://www.npmjs.com/package/@quillio/stringy
+[npm]: https://www.npmjs.com/package/@quillio/stringy
+[npm-badge]: https://img.shields.io/npm/v/stringy.svg?style=flat
+
+[code-cov]: https://codecov.io/gh/Quillio/stringy
+[code-cov-badge]: https://codecov.io/gh/Quillio/stringy/branch/master/graph/badge.svg
+
