@@ -13,7 +13,7 @@
     "bundlesize": "bundlesize",
     "start": "cd ./docs && npm run develop",
     "deploy:docs": "cd ./docs && npm run deploy",
-    "postinstall": "npm run bootstrap"
+    "postinstall": "npm run link"
   },
   "repository": {
     "type": "git",
