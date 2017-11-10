@@ -2,5 +2,5 @@
 .idea
 
 index.js
-index.spec.js
+index.test.js
 node_modules
