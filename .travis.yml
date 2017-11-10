@@ -9,4 +9,4 @@ script:
   - npm run build
   - npm run bundlesize
 after_success:
-  - coveralls
+  - npm run coverage
