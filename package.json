@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/walkerrandolphsmith/stringy#readme",
   "devDependencies": {
-    "ava": "^0.22.0",
+    "ava": "^0.23.0",
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
     "babel-plugin-transform-runtime": "^6.23.0",
