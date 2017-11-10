@@ -50,6 +50,5 @@ Coding style is established in the lint configuration and can be verified with `
 [npm]: https://www.npmjs.com/package/@quillio/stringy
 [npm-badge]: https://img.shields.io/npm/v/stringy.svg?style=flat
 
-[code-cov]: https://codecov.io/gh/Quillio/stringy
-[code-cov-badge]: https://codecov.io/gh/Quillio/stringy/branch/master/graph/badge.svg
-
+[code-cov]: https://coveralls.io/github/Quillio/stringy
+[code-cov-badge]: https://coveralls.io/repos/github/Quillio/stringy/badge.svg
