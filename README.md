@@ -56,8 +56,8 @@ To contribute please read the
 [waffle]: http://waffle.io/Quillio/stringy
 [waffle-badge]: https://img.shields.io/waffle/label/Quillio/stringy.svg
 
-[npm]: https://www.npmjs.com/package/@quillio/stringy
-[npm-badge]: https://img.shields.io/npm/v/stringy.svg?style=flat
+[npm]: https://www.npmjs.org/package/@quillio/stringy
+[npm-badge]: https://img.shields.io/npm/v/@quillio/stringy.svg
 
 [npm-deps]: https://david-dm.org/quillio/stringy
 [npm-deps-badge]: https://david-dm.org/quillio/stringy/status.svg
