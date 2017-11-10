@@ -4,7 +4,7 @@ node_js:
 install:
   - npm install
 script:
-  - npm t
+  - npm run test
   - npm run lint
   - npm run build
   - npm run bundlesize

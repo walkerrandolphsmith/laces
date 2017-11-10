@@ -7,7 +7,7 @@
     "link": "lerna bootstrap",
     "clean": "lerna clean --yes",
     "nuke": "npm run clean && lerna exec -- rm -rf ./dist",
-    "build": "lerna run build",
+    "build": "gulp build",
     "lint": "eslint -c .eslintrc packages",
     "test": "ava",
     "bundlesize": "bundlesize",
@@ -51,13 +51,16 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-uglify": "^3.0.0",
     "lerna": "^2.0.0-rc.4",
     "uglify-js": "^3.1.0"
   },
   "bundlesize": [
     {
       "path": "./packages/**/dist/index.js",
-      "maxSize": "4 kB"
+      "maxSize": "3 kB"
     }
   ],
   "babel": {
