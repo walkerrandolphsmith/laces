@@ -827,4 +827,16 @@ const map = {
   ₓ: 'x',
 };
 
+/**
+ * Replaces Latin characters with corresponding English characters
+ * @requires module:@quillio/stringy-toChars
+ * @param {string} string - The string to replace Latin characters from.
+ * @returns {string} Returns string with replaced Latin characters.
+ * @example
+ * // returns 'creme brulee'
+ * endsWith('crème brûlée');
+ * @example
+ * // returns 'my string'
+ * endsWith('my string');
+ */
 export default string => toChars(string).map(char => (map[char] ? map[char] : char)).join('');

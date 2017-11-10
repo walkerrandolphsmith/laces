@@ -1,3 +1,18 @@
+/**
+ * Python style template strings
+ * @param {string} string - Template string.
+ * @param {Array<string>} args - Strings to inject into the template
+ * @returns {string} Returns a string with only the last n characters
+ * @example
+ * // returns 'my templated string'
+ * template('my {0} string', 'templated');
+ * @example
+ * // returns 'my templated string!'
+ * template('my {0} string{1}', 'templated', '!');
+ * @example
+ * // returns 'my oh my a templated string!'
+ * template('{0} oh {0} a {1} string{2}', 'my', 'templated', '!')
+ */
 export default (string, ...args) => {
   const emptyPattern = '{}';
 
