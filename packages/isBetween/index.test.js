@@ -6,14 +6,18 @@ const right = '</a>';
 const match = 'val';
 const string = `${left}${match}${right}`;
 
-test('Value sut two patterns', t => t.is(sut(string, left, right), match));
+test('Value is between two patterns', t => t.is(sut(string, left, right), true));
 
-test('When left pattern doesnt match return string', t => t.is(sut(string, '<!a>', right), string));
+test('When left pattern does not match return string', t => t.is(sut(string, '<!a>', right), false));
 
-test('When right pattern doesnt match return string', t => t.is(sut(string, left, '</!a>'), string));
+test('When right pattern does not match return string', t => t.is(sut(string, left, '</!a>'), false));
 
-test('Nested pattern', t => t.is(sut(string + right, left, right), match));
+test('Nested pattern', t => t.is(sut(string + right, left, right), true));
 
-test('Treat "" as string start', t => t.is(sut(string, '', right), left + match));
+test('Empty left pattern', t => t.is(sut(string, '', right), true));
 
-test('Treat no right pattern as string end', t => t.is(sut(string, left), match + right));
+test('Empty right pattern', t => t.is(sut(string, left, ''), true));
+
+test('No left pattern', t => t.is(sut(string, undefined, right), true));
+
+test('No right pattern', t => t.is(sut(string, left), true));

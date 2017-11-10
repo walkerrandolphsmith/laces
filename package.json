@@ -8,6 +8,7 @@
     "clean": "lerna clean --yes",
     "nuke": "npm run clean && lerna exec -- rm -rf ./dist",
     "build": "gulp build",
+    "rebuild": "npm run nuke && npm run build && npm run link",
     "lint": "eslint -c .eslintrc packages",
     "test": "nyc ava",
     "report": "nyc report --reporter=html",

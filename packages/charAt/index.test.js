@@ -1,6 +1,8 @@
 import test from 'ava';
 import sut from './index';
 
+test('First char', t => t.is(sut('name'), 'n'));
+
 test('First char', t => t.is(sut('name', 0), 'n'));
 
 test('Last char', t => t.is(sut('name', 3), 'e'));
