@@ -1,6 +1,3 @@
----
-title: quickStart
----
 # Stringy
 
 Stringy is a modern JavaScript string utility library providing modularity and ease of use. 
@@ -19,6 +16,13 @@ Stringy is a modern JavaScript string utility library providing modularity and e
         <span class="label">Star</span>
     </a>
 </div>
+<br>
+
+[![npm][npm-badge]][npm]
+[![Build Status][ci-badge]][ci]
+[![Code Coverage][code-cov-badge]][code-cov]
+[![GitHub issues][issues-badge]][issues]
+[![Stories in Ready][waffle-badge]][waffle]
 
 ### Installation  
 
@@ -39,3 +43,22 @@ const stringy = require('@quillio/stringy')
 // Cherry-pick methods for smaller bundles
 const toSnakeCase = require('@quillio/stringy-toSnakeCase')
 ```
+
+To contribute please read the
+[contributing guide](https://github.com/quillio/stringy/blob/master/CONTRIBUTING.md) and
+[code of conduct](https://github.com/quillio/stringy/blob/master/CODE_OF_CONDUCT.md)
+
+[ci]: https://travis-ci.org/Quillio/stringy
+[ci-badge]: https://travis-ci.org/Quillio/stringy.svg?branch=master
+
+[issues]: https://github.com/Quillio/stringy/issues
+[issues-badge]: https://img.shields.io/github/issues/Quillio/stringy.svg
+
+[waffle]: http://waffle.io/Quillio/stringy
+[waffle-badge]: https://img.shields.io/waffle/label/Quillio/stringy.svg
+
+[npm]: https://www.npmjs.com/package/@quillio/stringy
+[npm-badge]: https://img.shields.io/npm/v/stringy.svg?style=flat
+
+[code-cov]: https://coveralls.io/github/Quillio/stringy
+[code-cov-badge]: https://coveralls.io/repos/github/Quillio/stringy/badge.svg

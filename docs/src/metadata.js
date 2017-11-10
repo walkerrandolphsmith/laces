@@ -95,7 +95,7 @@ export const generateMethods = (edges) => {
         const { frontmatter, html } = edge.node;
         const id = frontmatter.title;
 
-        if(id !== 'quickStart')
+        if(id)
             methods[id]['content'] = html.replace(/<h2>.*<\/h2>/, '')
     });
 
@@ -103,6 +103,6 @@ export const generateMethods = (edges) => {
 };
 
 export const generateQuickStart = (edges) => {
-    const edge = edges.find(edge => edge.node.frontmatter.title === 'quickStart');
+    const edge = edges.find(edge => !edge.node.frontmatter.title);
     return edge.node.html.replace(/<h1>(.*)<\/h1>/, () => '<h1>Hello World</h1>')
-}
+};
