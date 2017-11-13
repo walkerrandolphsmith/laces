@@ -4,10 +4,10 @@
  * @param {string} [pattern=' '] - The number of times to repeat
  * @returns {Array} Returns array of substrings
  * @example
- * // returns ['my', 'string']
  * repeat('my string');
+ * // returns ['my', 'string']
  * @example
- * // returns ['AA', 'BB', 'CC']
  * repeat('AA_BB_CC', '_');
+ * // returns ['AA', 'BB', 'CC']
  */
 export default (string, pattern = ' ') => string.split(pattern);

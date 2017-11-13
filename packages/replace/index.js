@@ -5,13 +5,13 @@
  * @param {string|callback} strategy - A replacement string or function that returns a string
  * @returns {string} Returns string with pattern replaced with strategy
  * @example
- * // returns 'my string'
  * replace('my string');
+ * // returns 'my string'
  * @example
- * // returns 'my replacement'
  * replace('my string', 'string', 'replacement');
+ * // returns 'my replacement'
  * @example
- * // returns 'my String'
  * replace('my string', 'string', (match) => match.toUppercase());
+ * // returns 'my String'
  */
 export default (string, pattern, strategy) => string.replace(pattern, strategy);

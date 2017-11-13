@@ -4,10 +4,10 @@
  * @param {string} pattern - The pattern to match
  * @returns {boolean} Returns true if the string ends with pattern and false otherwise
  * @example
- * // returns true
  * endsWith('my string', 'ing');
+ * // returns true
  * @example
- * // returns false
  * endsWith('my string' 'eng');
+ * // returns false
  */
 export default (string, pattern) => new RegExp(`${pattern}$`).test(string);

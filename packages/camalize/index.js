@@ -6,7 +6,7 @@ import toCamelCase from '@quillio/stringy-toCamelCase';
  * @param {string} string - The string to camel case.
  * @returns {string} Returns the camel cased string
  * @example
- * // returns 'myString'
  * camalize('my string');
+ * // returns 'myString'
  */
 export default string => toCamelCase(string);

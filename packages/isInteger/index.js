@@ -6,16 +6,16 @@ import startsWith from '@quillio/stringy-startsWith';
  * @param {string} string - The string to query.
  * @returns {boolean} Returns true if the string represents a valid integer
  * @example
- * // returns true
  * isInteger('1');
- * @example
  * // returns true
+ * @example
  * isInteger('-1');
+ * // returns true
  * @example
- * // returns false
  * isInteger('1.5');
- * @example
  * // returns false
+ * @example
  * isInteger('my string');
+ * // returns false
  */
 export default string => !startsWith(string, '0') && Number.isInteger(Number.parseFloat(string));

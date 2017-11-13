@@ -3,11 +3,11 @@
  * @param {string} string - The string to reverse.
  * @returns {string} Returns a reversed string
  * @example
- * // returns 'my string'
  * reverse('gnirts ym');
+ * // returns 'my string'
  * @example
- * // returns 'anañam anañam'
  * reverse('mañana mañana');
+ * // returns 'anañam anañam'
  */
 export default (string) => {
   const regexSurrogatePair = /([\uD800-\uDBFF])([\uDC00-\uDFFF])/g;

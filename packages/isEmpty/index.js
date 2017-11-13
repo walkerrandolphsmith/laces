@@ -3,10 +3,10 @@
  * @param {string} string - The string to query.
  * @returns {boolean} Returns true if the string contains no characters
  * @example
- * // returns true
  * isEmpty('');
+ * // returns true
  * @example
- * // returns false
  * isEmpty(' ');
+ * // returns false
  */
 export default (string = '') => string === '';

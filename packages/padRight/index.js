@@ -8,13 +8,13 @@ import repeat from '@quillio/stringy-repeat';
  * @param {string} [character=' '] - The string to prepend
  * @returns {string} Returns string with a character prepended n times
  * @example
- * // returns 'my string'
  * padRight('my string');
+ * // returns 'my string'
  * @example
- * // returns ' my string'
  * padRight('my string', 1);
+ * // returns ' my string'
  * @example
- * // returns '.my string'
  * padRight('my string', 1, '.');
+ * // returns '.my string'
  */
 export default (string, amount = 0, character = ' ') => string + repeat(character, amount);

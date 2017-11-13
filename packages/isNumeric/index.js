@@ -12,23 +12,23 @@ const defaultConfig = {
  * @param {Object} config - Configuration to specify what numbers sets to include
  * @returns {boolean} Returns true if the string represents a valid number
  * @example
- * // returns true
  * isNumeric('1');
- * @example
  * // returns true
+ * @example
  * isNumeric('-1');
- * @example
  * // returns true
+ * @example
  * isNumeric('1.5');
+ * // returns true
  * @example
- * // returns false
  * isNumeric('-1', { integers: false });
- * @example
  * // returns false
+ * @example
  * isNumeric('1.5', { real: false });
- * @example
  * // returns false
+ * @example
  * isNumeric('my string');
+ * // returns false
  */
 export default (string, config = defaultConfig) => {
   if (typeof string === 'boolean' || Array.isArray(string) || isBlank(string)) {

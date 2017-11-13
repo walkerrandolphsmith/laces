@@ -4,14 +4,14 @@
  * @param {Array<string>} args - Strings to inject into the template
  * @returns {string} Returns a string with only the last n characters
  * @example
- * // returns 'my templated string'
  * template('my {0} string', 'templated');
+ * // returns 'my templated string'
  * @example
- * // returns 'my templated string!'
  * template('my {0} string{1}', 'templated', '!');
+ * // returns 'my templated string!'
  * @example
- * // returns 'my oh my a templated string!'
  * template('{0} oh {0} a {1} string{2}', 'my', 'templated', '!')
+ * // returns 'my oh my a templated string!'
  */
 export default (string, ...args) => {
   const emptyPattern = '{}';

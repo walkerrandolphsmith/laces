@@ -3,14 +3,14 @@
  * @param {string} string - The string to convert to space case.
  * @returns {string} Returns a space cased string.
  * @example
- * // returns 'my string'
  * endsWith('myString');
- * @example
  * // returns 'my string'
+ * @example
  * endsWith('myString');
- * @example
  * // returns 'my string'
+ * @example
  * endsWith('my-string');
+ * // returns 'my string'
  */
 export default string => string.replace(
   /[A-Z|\-|_|\s](\w{1})/g,

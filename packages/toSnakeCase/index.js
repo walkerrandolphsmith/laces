@@ -3,14 +3,14 @@
  * @param {string} string - The string to convert to snake case.
  * @returns {string} Returns a snake cased string.
  * @example
- * // returns 'my_string'
  * endsWith('my string');
- * @example
  * // returns 'my_string'
+ * @example
  * endsWith('myString');
- * @example
  * // returns 'my_string'
+ * @example
  * endsWith('my-string');
+ * // returns 'my_string'
  */
 export default string => string.replace(
   /[A-Z|\-|\s](\w{1})/g,

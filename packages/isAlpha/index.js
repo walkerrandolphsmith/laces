@@ -3,13 +3,13 @@
  * @param {string} string - The string to query.
  * @returns {boolean} Returns true if the string only contains alpha characters
  * @example
- * // returns true
  * isAlpha('my string');
+ * // returns true
  * @example
- * // returns false
  * isAlpha('my-string');
- * @example
  * // returns false
+ * @example
  * isAlpha('555-5555');
+ * // returns false
  */
 export default string => /^[a-zA-Z]*$/.test(string);

@@ -4,16 +4,16 @@
  * @param {string} [pattern=''] - The pattern to omit
  * @returns {string} Returns string with the pattern omitted
  * @example
- * // returns 'my string'
  * remove('my string');
+ * // returns 'my string'
  * @example
- * // returns ' string'
  * remove('my string', 'my');
+ * // returns ' string'
  * @example
- * // returns 'my '
  * remove('my string', 'string');
+ * // returns 'my '
  * @example
- * // returns 'string'
  * remove('my my string', 'my ');
+ * // returns 'string'
  */
 export default (string, pattern = '') => string.replace(new RegExp(`${pattern}`, 'g'), '');

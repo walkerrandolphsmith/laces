@@ -7,8 +7,8 @@ import toChars from '@quillio/stringy-toChars';
  * @param {string} delimiter - The pattern to split lines on.
  * @returns {Array<string>} Returns a kebab cased string.
  * @example
- * // returns ['first line', 'second line']
  * toLines('first line\n second line');
+ * // returns ['first line', 'second line']
  */
 export default (string, delimiter = '\n') => {
   const lines = [''];

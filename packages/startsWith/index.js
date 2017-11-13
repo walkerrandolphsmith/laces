@@ -4,10 +4,10 @@
  * @param {string} pattern - The pattern to match
  * @returns {boolean} Returns true if the string starts with pattern and false otherwise
  * @example
- * // returns true
  * startsWith('my string' 'my');
+ * // returns true
  * @example
- * // returns false
  * startsWith('my string', 'ing');
+ * // returns false
  */
 export default (string, pattern) => new RegExp(`^${pattern}`).test(string);

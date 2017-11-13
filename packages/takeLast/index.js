@@ -4,10 +4,10 @@
  * @param {number} amount - The number of characters to include.
  * @returns {string} Returns a string with only the last n characters
  * @example
- * // returns 'g'
  * takeLast('my string');
+ * // returns 'g'
  * @example
- * // returns 'ng'
  * takeLast('my string' 2);
+ * // returns 'ng'
  */
 export default (string, amount = 1) => string.substring(string.length - amount, string.length);

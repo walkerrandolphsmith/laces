@@ -7,10 +7,10 @@ import toChars from '@quillio/stringy-toChars';
  * @param {function} predicate - Receives each character of string as argument.
  * @returns {string} Returns a string that contains characters that meet predicate.
  * @example
- * // returns 'my string'
  * takeWhile('my string');
+ * // returns 'my string'
  * @example
- * // returns 'mystring'
  * takeWhile('my string' character => character !== ' ');
+ * // returns 'mystring'
  */
 export default (string, predicate) => (typeof predicate !== 'function' ? string : toChars(string).filter(predicate).join(''));
