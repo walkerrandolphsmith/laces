@@ -4,6 +4,7 @@
   "description": "Common string utilties written in JavaScript",
   "main": "index.js",
   "scripts": {
+    "create": "gulp create --name",
     "link": "lerna bootstrap",
     "clean": "lerna clean --yes",
     "nuke": "npm run clean && lerna exec -- rm -rf ./dist",
@@ -62,7 +63,9 @@
     "gulp-uglify": "^3.0.0",
     "inchjs": "^0.4.1",
     "lerna": "^2.0.0-rc.4",
+    "mkdirp": "^0.5.1",
     "nyc": "^11.3.0",
+    "require-dir": "^0.3.2",
     "uglify-js": "^3.1.0"
   },
   "bundlesize": [

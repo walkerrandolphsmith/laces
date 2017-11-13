@@ -21,12 +21,18 @@ that each directory under the `packages` directory is an independent npm package
 
 Add dependencies to a package by making `/packages/<package-in-progress>` your working directory and run the following command:
 ```npm install <new-package> --save```
+
+### Adding a brand new package?
+If you would like to create a brand new package there is a gulp task to scaffold out the structure.
+```
+npm run create --name <name-of-package-to-add>
+```
  
 ### Coding guidelines
 
 * **Tests**:  
-Functions should be unit tested and bug fixes should include unit tests that exercise the broken functionality. Hopefully it can help drive the design of a function as well. Tests can be verified with `npm run test`
+Functions should be unit tested and bug fixes should include unit tests that exercise the broken functionality. Hopefully it can help drive the design of a function as well. Tests can be verified with `npm run test`  
 * **Comments**:  
-Functions should include JSDoc-style comments.
+Functions should include JSDoc-style comments.  
 * **Coding Style**:  
-Coding style is established in the lint configuration and can be verified with `npm run lint`
+Coding style is established in the lint configuration and can be verified with `npm run lint`  
