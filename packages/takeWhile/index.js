@@ -13,4 +13,6 @@ import toChars from '@quillio/stringy-toChars';
  * takeWhile('my string' character => character !== ' ');
  * // returns 'mystring'
  */
-export default (string, predicate) => (typeof predicate !== 'function' ? string : toChars(string).filter(predicate).join(''));
+const takeWhile = (string, predicate) => (typeof predicate !== 'function' ? string : toChars(string).filter(predicate).join(''));
+
+export default takeWhile;

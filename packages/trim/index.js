@@ -15,4 +15,6 @@ import trimRight from '@quillio/stringy-trimRight';
  * toLowerCase('Xmy stringX', 'X');
  * // returns 'my string'
  */
-export default (string, pattern = ' ') => trimRight(trimLeft(string, pattern), pattern);
+const trim = (string, pattern = ' ') => trimRight(trimLeft(string, pattern), pattern);
+
+export default trim;

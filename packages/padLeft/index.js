@@ -17,4 +17,6 @@ import repeat from '@quillio/stringy-repeat';
  * padLeft('my string', 1, '.');
  * // returns '.my string'
  */
-export default (string, amount = 0, character = ' ') => repeat(character, amount) + string;
+const padLeft = (string, amount = 0, character = ' ') => repeat(character, amount) + string;
+
+export default padLeft;

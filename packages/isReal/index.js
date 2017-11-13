@@ -18,7 +18,7 @@ import isBlank from '@quillio/stringy-isBlank';
  * isNumeric('my string');
  * // returns false
  */
-export default (string) => {
+const isReal = (string) => {
   if (typeof string === 'boolean' || Array.isArray(string) || isBlank(string)) {
     return false;
   }
@@ -29,3 +29,5 @@ export default (string) => {
 
   return !Number.isNaN(string);
 };
+
+export default isReal;

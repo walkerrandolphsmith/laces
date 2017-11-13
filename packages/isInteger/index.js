@@ -18,4 +18,6 @@ import startsWith from '@quillio/stringy-startsWith';
  * isInteger('my string');
  * // returns false
  */
-export default string => !startsWith(string, '0') && Number.isInteger(Number.parseFloat(string));
+const isInteger = string => !startsWith(string, '0') && Number.isInteger(Number.parseFloat(string));
+
+export default isInteger;

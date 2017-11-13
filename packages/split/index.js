@@ -10,4 +10,6 @@
  * repeat('AA_BB_CC', '_');
  * // returns ['AA', 'BB', 'CC']
  */
-export default (string, pattern = ' ') => string.split(pattern);
+const split = (string, pattern = ' ') => string.split(pattern);
+
+export default split;

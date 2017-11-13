@@ -11,4 +11,6 @@
  * clamp('my string', 1, '(...)');
  * // returns 'my(...)'
  */
-export default (string, length, pattern = '...') => (string.length >= length ? `${string.substring(0, length)}${pattern}` : string);
+const clamp = (string, length, pattern = '...') => (string.length >= length ? `${string.substring(0, length)}${pattern}` : string);
+
+export default clamp;

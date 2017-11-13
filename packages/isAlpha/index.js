@@ -12,4 +12,6 @@
  * isAlpha('555-5555');
  * // returns false
  */
-export default string => /^[a-zA-Z]*$/.test(string);
+const isAlpha = string => /^[a-zA-Z]*$/.test(string);
+
+export default isAlpha;

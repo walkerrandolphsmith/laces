@@ -30,7 +30,7 @@ const defaultConfig = {
  * isNumeric('my string');
  * // returns false
  */
-export default (string, config = defaultConfig) => {
+const isNumeric = (string, config = defaultConfig) => {
   if (typeof string === 'boolean' || Array.isArray(string) || isBlank(string)) {
     return false;
   }
@@ -50,3 +50,5 @@ export default (string, config = defaultConfig) => {
   }
   return !Number.isNaN(Number(string));
 };
+
+export default isNumeric;

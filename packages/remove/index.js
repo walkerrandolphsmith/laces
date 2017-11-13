@@ -16,4 +16,6 @@
  * remove('my my string', 'my ');
  * // returns 'string'
  */
-export default (string, pattern = '') => string.replace(new RegExp(`${pattern}`, 'g'), '');
+const remove = (string, pattern = '') => string.replace(new RegExp(`${pattern}`, 'g'), '');
+
+export default remove;

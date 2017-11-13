@@ -10,4 +10,6 @@
  * takeLast('my string' 2);
  * // returns 'ng'
  */
-export default (string, amount = 1) => string.substring(string.length - amount, string.length);
+const takeLast = (string, amount = 1) => string.substring(string.length - amount, string.length);
+
+export default takeLast;

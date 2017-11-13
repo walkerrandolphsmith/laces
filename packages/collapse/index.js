@@ -9,4 +9,6 @@
  * collapse('\tmy string\n');
  * // returns 'mystring'
  */
-export default string => string.replace(/\s/g, '');
+const collapse = string => string.replace(/\s/g, '');
+
+export default collapse;

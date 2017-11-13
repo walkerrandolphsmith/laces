@@ -12,9 +12,11 @@
  * endsWith('my_string');
  * // returns 'my-string'
  */
-export default string => string.replace(
+const toKebabCase = string => string.replace(
   /[A-Z|_|\s](\w{1})/g,
   (match, _, index, original) => `-${/^[A-Z]/.test(match)
     ? match[0].toLowerCase() + original.substring(index + 1, index + 2)
     : original.substring(index + 1, index + 2)}`,
 );
+
+export default toKebabCase;

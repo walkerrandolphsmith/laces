@@ -9,7 +9,7 @@
  * reverse('mañana mañana');
  * // returns 'anañam anañam'
  */
-export default (string) => {
+const reverse = (string) => {
   const regexSurrogatePair = /([\uD800-\uDBFF])([\uDC00-\uDFFF])/g;
   const stringWithSwappedSurrogatePairs = string.replace(regexSurrogatePair, '$2$1');
 
@@ -21,3 +21,5 @@ export default (string) => {
   }
   return result;
 };
+
+export default reverse;

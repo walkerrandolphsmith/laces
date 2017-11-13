@@ -10,4 +10,6 @@
  * chompRight('my string', 'non-matching-pattern');
  * // returns 'my string'
  */
-export default (string, pattern) => string.replace(new RegExp(`${pattern}$`), '');
+const chompRight = (string, pattern) => string.replace(new RegExp(`${pattern}$`), '');
+
+export default chompRight;

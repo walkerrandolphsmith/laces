@@ -9,4 +9,6 @@ import toSpaceCase from '@quillio/stringy-toSpaceCase';
  * toLowerCase('My sentence is great');
  * // returns ['my', 'sentence', 'is', 'great']
  */
-export default string => toSpaceCase(string).split(' ').filter(w => !!w);
+const toWords = string => toSpaceCase(string).split(' ').filter(w => !!w);
+
+export default toWords;

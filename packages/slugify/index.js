@@ -11,4 +11,6 @@ import latinise from '@quillio/stringy-latinise';
  * repeat('my string');
  * // returns 'my-string'
  */
-export default (string = '') => latinise(toKebabCase(string));
+const slugify = (string = '') => latinise(toKebabCase(string));
+
+export default slugify;

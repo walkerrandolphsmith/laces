@@ -6,4 +6,6 @@
  * toUpperCase('My String');
  * // returns 'MY STRING'
  */
-export default string => string.toUpperCase();
+const toUpperCase = string => string.toUpperCase();
+
+export default toUpperCase;

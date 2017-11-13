@@ -13,7 +13,7 @@
  * template('{0} oh {0} a {1} string{2}', 'my', 'templated', '!')
  * // returns 'my oh my a templated string!'
  */
-export default (string, ...args) => {
+const template = (string, ...args) => {
   const emptyPattern = '{}';
 
   let newString = string.slice();
@@ -58,3 +58,5 @@ export default (string, ...args) => {
 
   return finalString.slice(start, end);
 };
+
+export default template;

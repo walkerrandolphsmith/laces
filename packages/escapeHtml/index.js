@@ -16,7 +16,7 @@ const map = {
  * escapeHtml('my string');
  * // returns 'my string'
  */
-export default (string) => {
+const escapeHtml = (string) => {
   const reg = new RegExp(/["'<>]/);
   let match;
   let s = string;
@@ -26,3 +26,5 @@ export default (string) => {
   }
   return s;
 };
+
+export default escapeHtml;

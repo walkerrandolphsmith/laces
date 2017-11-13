@@ -10,4 +10,6 @@
  * charAt('my string', 1);
  * // returns 'y'
  */
-export default (string, index = 0) => string.charAt(index);
+const charAt = (string, index = 0) => string.charAt(index);
+
+export default charAt;

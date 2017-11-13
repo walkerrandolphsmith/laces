@@ -10,7 +10,7 @@ import toChars from '@quillio/stringy-toChars';
  * toLines('first line\n second line');
  * // returns ['first line', 'second line']
  */
-export default (string, delimiter = '\n') => {
+const toLines = (string, delimiter = '\n') => {
   const lines = [''];
   const chars = toChars(string);
 
@@ -28,3 +28,5 @@ export default (string, delimiter = '\n') => {
 
   return lines;
 };
+
+export default toLines;

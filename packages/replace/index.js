@@ -14,4 +14,6 @@
  * replace('my string', 'string', (match) => match.toUppercase());
  * // returns 'my String'
  */
-export default (string, pattern, strategy) => string.replace(pattern, strategy);
+const replace = (string, pattern, strategy) => string.replace(pattern, strategy);
+
+export default replace;

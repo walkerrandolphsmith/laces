@@ -9,4 +9,6 @@
  * endsWith('my string');
  * // returns 'my string'
  */
-export default string => string.replace(/[-[\]/{}()*+?.\\^$|]/g, match => `\\${match}`);
+const escapeRegex = string => string.replace(/[-[\]/{}()*+?.\\^$|]/g, match => `\\${match}`);
+
+export default escapeRegex;

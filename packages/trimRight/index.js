@@ -10,4 +10,6 @@
  * toLowerCase('Xmy stringX', 'X');
  * // returns 'Xmy string'
  */
-export default (string, pattern = ' ') => string.replace(new RegExp(`\\${pattern}*$`), '');
+const trimRight = (string, pattern = ' ') => string.replace(new RegExp(`\\${pattern}*$`), '');
+
+export default trimRight;

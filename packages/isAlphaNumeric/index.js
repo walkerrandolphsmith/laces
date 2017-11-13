@@ -15,4 +15,6 @@
  * isAlphaNumeric('my-string');
  * // returns false
  */
-export default string => /^[a-zA-Z0-9]*$/.test(string);
+const isAlphaNumeric = string => /^[a-zA-Z0-9]*$/.test(string);
+
+export default isAlphaNumeric;

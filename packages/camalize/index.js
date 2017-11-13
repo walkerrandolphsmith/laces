@@ -9,4 +9,6 @@ import toCamelCase from '@quillio/stringy-toCamelCase';
  * camalize('my string');
  * // returns 'myString'
  */
-export default string => toCamelCase(string);
+const camalize = string => toCamelCase(string);
+
+export default camalize;

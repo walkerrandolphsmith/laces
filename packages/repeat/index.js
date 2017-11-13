@@ -13,4 +13,6 @@
  * repeat('my string', 2);
  * // returns 'my stringmy string'
  */
-export default (string, amount = 1) => Array.from(Array(amount), () => string).reduce((ns, char) => ns + char, '');
+const repeat = (string, amount = 1) => Array.from(Array(amount), () => string).reduce((ns, char) => ns + char, '');
+
+export default repeat;

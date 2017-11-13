@@ -6,4 +6,6 @@
  * capitalize('my string');
  * // returns 'My string'
  */
-export default string => string.charAt(0).toUpperCase() + string.slice(1);
+const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1);
+
+export default capitalize;

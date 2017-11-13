@@ -6,4 +6,6 @@
  * toLowerCase('My String');
  * // returns 'my string'
  */
-export default string => string.toLowerCase();
+const toLowerCase = string => string.toLowerCase();
+
+export default toLowerCase;

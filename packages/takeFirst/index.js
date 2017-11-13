@@ -10,4 +10,6 @@
  * takeFirst('my string' 2);
  * // returns 'my'
  */
-export default (string, amount = 1) => string.substring(0, amount);
+const takeFirst = (string, amount = 1) => string.substring(0, amount);
+
+export default takeFirst;

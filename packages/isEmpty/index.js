@@ -9,4 +9,6 @@
  * isEmpty(' ');
  * // returns false
  */
-export default (string = '') => string === '';
+const isEmpty = (string = '') => string === '';
+
+export default isEmpty;

@@ -10,7 +10,7 @@
  * isMatch('password', 'wrong password');
  * // returns false
  */
-export default (subject, compareTo) => {
+const isMatch = (subject, compareTo) => {
   let isMismatch = subject.length === compareTo.length ? 0 : 1;
   const z = isMismatch ? subject : compareTo;
 
@@ -20,3 +20,5 @@ export default (subject, compareTo) => {
 
   return !isMismatch;
 };
+
+export default isMatch;

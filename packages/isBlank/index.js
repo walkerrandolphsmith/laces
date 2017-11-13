@@ -15,4 +15,6 @@
  * isBlank('my string');
  * // returns false
  */
-export default (string = null) => string === null || string.trim() === '';
+const isBlank = (string = null) => string === null || string.trim() === '';
+
+export default isBlank;

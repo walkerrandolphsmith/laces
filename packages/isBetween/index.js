@@ -17,6 +17,8 @@
  * isBetween('my string', '', 'eng');
  * // returns false
  */
-export default (string, leftPattern = '', rightPattern = '') => (
+const isBetween = (string, leftPattern = '', rightPattern = '') => (
   string.indexOf(leftPattern) > -1 && string.indexOf(rightPattern) > -1
 );
+
+export default isBetween;

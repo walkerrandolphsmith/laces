@@ -12,7 +12,9 @@ import capitalize from '@quillio/stringy-capitalize';
  * toCamelCase('my string');
  * // returns 'my string'
  */
-export default string => string.replace(
+const toCamelCase = string => string.replace(
   /[_|\-|\s](\w{1})/g,
   (_, __, index, original) => capitalize(original.substring(index + 1, index + 2)),
 );
+
+export default toCamelCase;

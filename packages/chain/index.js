@@ -23,7 +23,7 @@ import { manipulations as functions } from '@quillio/stringy-functions';
  *      .value();
  * // returns 'MyStringMyString'
  */
-export default function (string) {
+const chain = function (string) {
   let s = string;
 
   const wrappedFns = Object
@@ -47,4 +47,6 @@ export default function (string) {
     // value returns the wrapped string
     value: () => s,
   };
-}
+};
+
+export default chain;

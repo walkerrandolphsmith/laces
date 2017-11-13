@@ -839,4 +839,6 @@ const map = {
  * endsWith('my string');
  * // returns 'my string'
  */
-export default string => toChars(string).map(char => (map[char] ? map[char] : char)).join('');
+const latinise = string => toChars(string).map(char => (map[char] ? map[char] : char)).join('');
+
+export default latinise;

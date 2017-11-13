@@ -10,4 +10,6 @@
  * endsWith('my string' 'eng');
  * // returns false
  */
-export default (string, pattern) => new RegExp(`${pattern}$`).test(string);
+const endsWith = (string, pattern) => new RegExp(`${pattern}$`).test(string);
+
+export default endsWith;

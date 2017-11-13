@@ -10,4 +10,6 @@
  * startsWith('my string', 'ing');
  * // returns false
  */
-export default (string, pattern) => new RegExp(`^${pattern}`).test(string);
+const startsWith = (string, pattern) => new RegExp(`^${pattern}`).test(string);
+
+export default startsWith;
