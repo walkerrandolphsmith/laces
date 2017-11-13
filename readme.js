@@ -1,4 +1,7 @@
-# @quillio/takeWhile  
+const { lstatSync, readdirSync, writeFileSync } = require('fs');
+const { join, resolve } = require('path');
+
+const buildReadMe = (name) => `# @quillio/${name}  
 
 <div class="social-buttons">
     <a href="https://twitter.com/Quillio_io" class="btn twitter-follow-btn">
@@ -26,22 +29,22 @@
 [![Stories in Ready][waffle-badge]][waffle]
 
 Using npm:
-```sh
+\`\`\`sh
 // Install full build
 $ npm install --save @quillio/stringy
 
 // Cherry-pick only what you need
-$ npm install --save @quillio/stringy-takeWhile
-```
+$ npm install --save @quillio/stringy-${name}
+\`\`\`
 
 Use in Node.js: 
-```js
+\`\`\`js
 // Load the full build
 const stringy = require('@quillio/stringy')
 
 // Cherry-pick methods for smaller bundles
-const takeWhile = require('@quillio/stringy-takeWhile')
-```
+const ${name} = require('@quillio/stringy-${name}')
+\`\`\`
 
 For additional documentation please use the 
 [documentation site](https://quillio.io/stringy)
@@ -57,8 +60,8 @@ To contribute please read the
 [waffle]: http://waffle.io/Quillio/stringy
 [waffle-badge]: https://img.shields.io/waffle/label/Quillio/stringy.svg
 
-[npm]: https://www.npmjs.org/package/@quillio/stringy-takeWhile
-[npm-badge]: https://img.shields.io/npm/v/@quillio/stringy-takeWhile.svg
+[npm]: https://www.npmjs.org/package/@quillio/stringy-${name}
+[npm-badge]: https://img.shields.io/npm/v/@quillio/stringy-${name}.svg
 
 [npm-deps]: https://david-dm.org/quillio/stringy
 [npm-deps-badge]: https://david-dm.org/quillio/stringy/status.svg
@@ -74,3 +77,20 @@ To contribute please read the
 
 [license]: https://opensource.org/licenses/MIT
 [license-badge]: https://img.shields.io/badge/License-MIT-brightgreen.svg
+`;
+
+const packagesPath = resolve(__dirname, 'packages');
+
+const isDirectory = source => lstatSync(source).isDirectory();
+
+const getDirectories = source => readdirSync(source)
+    .map(name => join(source, name))
+    .filter(isDirectory)
+    .map(path => path.split('/').pop());
+
+const packageNames = getDirectories(packagesPath);
+
+packageNames.forEach(packageName => {
+    const readMeContents = buildReadMe(packageName);
+    writeFileSync(`${packagesPath}/${packageName}/README.md`, readMeContents)
+});

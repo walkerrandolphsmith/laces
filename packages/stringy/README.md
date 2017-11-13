@@ -1,4 +1,6 @@
-# @quillio/takeWhile  
+# Stringy
+
+Stringy is a modern JavaScript string utility library providing modularity and ease of use. 
 
 <div class="social-buttons">
     <a href="https://twitter.com/Quillio_io" class="btn twitter-follow-btn">
@@ -25,13 +27,15 @@
 [![Code Style][code-style-badge]][code-style]
 [![Stories in Ready][waffle-badge]][waffle]
 
+### Installation  
+
 Using npm:
 ```sh
 // Install full build
 $ npm install --save @quillio/stringy
 
 // Cherry-pick only what you need
-$ npm install --save @quillio/stringy-takeWhile
+$ npm install --save @quillio/stringy-toSnakeCase
 ```
 
 Use in Node.js: 
@@ -40,16 +44,12 @@ Use in Node.js:
 const stringy = require('@quillio/stringy')
 
 // Cherry-pick methods for smaller bundles
-const takeWhile = require('@quillio/stringy-takeWhile')
+const toSnakeCase = require('@quillio/stringy-toSnakeCase')
 ```
-
-For additional documentation please use the 
-[documentation site](https://quillio.io/stringy)
 
 To contribute please read the
 [contributing guide](https://github.com/quillio/stringy/blob/master/CONTRIBUTING.md) and
-[code of conduct](https://github.com/quillio/stringy/blob/master/CODE_OF_CONDUCT.md).
-
+[code of conduct](https://github.com/quillio/stringy/blob/master/CODE_OF_CONDUCT.md)
 
 [ci]: https://travis-ci.org/Quillio/stringy
 [ci-badge]: https://travis-ci.org/Quillio/stringy.svg?branch=master
@@ -57,8 +57,8 @@ To contribute please read the
 [waffle]: http://waffle.io/Quillio/stringy
 [waffle-badge]: https://img.shields.io/waffle/label/Quillio/stringy.svg
 
-[npm]: https://www.npmjs.org/package/@quillio/stringy-takeWhile
-[npm-badge]: https://img.shields.io/npm/v/@quillio/stringy-takeWhile.svg
+[npm]: https://www.npmjs.org/package/@quillio/stringy
+[npm-badge]: https://img.shields.io/npm/v/@quillio/stringy.svg
 
 [npm-deps]: https://david-dm.org/quillio/stringy
 [npm-deps-badge]: https://david-dm.org/quillio/stringy/status.svg
@@ -74,3 +74,4 @@ To contribute please read the
 
 [license]: https://opensource.org/licenses/MIT
 [license-badge]: https://img.shields.io/badge/License-MIT-brightgreen.svg
+
