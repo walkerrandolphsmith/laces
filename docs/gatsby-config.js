@@ -1,5 +1,3 @@
-const path = require('path')
-
 const url = process.env.GATSBY_URL || 'http://quillio.io/stringy/';
 
 module.exports = {
@@ -17,18 +15,19 @@ module.exports = {
   },
   plugins: [
       'gatsby-plugin-react-helmet',
+      `gatsby-transformer-documentationjs`,
       {
-          resolve: 'gatsby-source-filesystem',
+          resolve: `gatsby-source-filesystem`,
           options: {
-              name: 'methods',
-              path: `${path.resolve(__dirname, '..', 'packages')}/**/README.md`,
+              name: `source`,
+              path: `${__dirname}/../packages/`,
           },
       },
       {
           resolve: 'gatsby-source-filesystem',
           options: {
               name: 'main',
-              path: path.resolve(__dirname, '..', 'README.md'),
+              path: `${__dirname}/../README.md`,
           },
       },
       {
@@ -40,4 +39,4 @@ module.exports = {
           }
       },
   ],
-}
+};
