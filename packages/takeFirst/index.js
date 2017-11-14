@@ -4,10 +4,12 @@
  * @param {number} amount - The number of characters to include.
  * @returns {string} Returns a string with only the first n characters
  * @example
- * // returns 'm'
  * takeFirst('my string');
+ * // returns 'm'
  * @example
- * // returns 'my'
  * takeFirst('my string' 2);
+ * // returns 'my'
  */
-export default (string, amount = 1) => string.substring(0, amount);
+const takeFirst = (string, amount = 1) => string.substring(0, amount);
+
+export default takeFirst;

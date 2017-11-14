@@ -5,10 +5,12 @@
  * @param {string} [pattern='...'] - Pattern to append to the string.
  * @returns {string} Returns a string that may be truncated
  * @example
- * // returns 'my...'
  * clamp('my string', 1);
+ * // returns 'my...'
  * @example
- * // returns 'my(...)'
  * clamp('my string', 1, '(...)');
+ * // returns 'my(...)'
  */
-export default (string, length, pattern = '...') => (string.length >= length ? `${string.substring(0, length)}${pattern}` : string);
+const clamp = (string, length, pattern = '...') => (string.length >= length ? `${string.substring(0, length)}${pattern}` : string);
+
+export default clamp;

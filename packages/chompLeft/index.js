@@ -4,10 +4,12 @@
  * @param {string} pattern - Pattern to remove.
  * @returns {string} Returns a string that does not start with the pattern
  * @example
- * // returns 'string'
  * chompLeft('my string', 'my');
+ * // returns 'string'
  * @example
- * // returns 'my string'
  * chompLeft('my string', 'non-matching-pattern');
+ * // returns 'my string'
  */
-export default (string, pattern) => string.replace(new RegExp(`^${pattern}`), '');
+const chompLeft = (string, pattern) => string.replace(new RegExp(`^${pattern}`), '');
+
+export default chompLeft;

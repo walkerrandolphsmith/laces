@@ -9,10 +9,12 @@ import trimRight from '@quillio/stringy-trimRight';
  * @param {string} [pattern=' '] - The pattern to remove.
  * @returns {string} Returns a string with the pattern omitted from the beginning and end.
  * @example
- * // returns 'my string'
  * toLowerCase('my string');
- * @example
  * // returns 'my string'
+ * @example
  * toLowerCase('Xmy stringX', 'X');
+ * // returns 'my string'
  */
-export default (string, pattern = ' ') => trimRight(trimLeft(string, pattern), pattern);
+const trim = (string, pattern = ' ') => trimRight(trimLeft(string, pattern), pattern);
+
+export default trim;

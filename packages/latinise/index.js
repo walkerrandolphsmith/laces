@@ -833,10 +833,12 @@ const map = {
  * @param {string} string - The string to replace Latin characters from.
  * @returns {string} Returns string with replaced Latin characters.
  * @example
- * // returns 'creme brulee'
  * endsWith('crème brûlée');
+ * // returns 'creme brulee'
  * @example
- * // returns 'my string'
  * endsWith('my string');
+ * // returns 'my string'
  */
-export default string => toChars(string).map(char => (map[char] ? map[char] : char)).join('');
+const latinise = string => toChars(string).map(char => (map[char] ? map[char] : char)).join('');
+
+export default latinise;

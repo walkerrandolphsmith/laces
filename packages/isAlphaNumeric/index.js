@@ -3,16 +3,18 @@
  * @param {string} string - The string to query.
  * @returns {boolean} Returns true if the string only contains alpha characters or numbers
  * @example
- * // returns true
  * isAlphaNumeric('my string');
- * @example
  * // returns true
+ * @example
  * isAlphaNumeric('5555555');
- * @example
  * // returns true
- * isAlphaNumeric('my number 5555555');
  * @example
- * // returns false
+ * isAlphaNumeric('my number 5555555');
+ * // returns true
+ * @example
  * isAlphaNumeric('my-string');
+ * // returns false
  */
-export default string => /^[a-zA-Z0-9]*$/.test(string);
+const isAlphaNumeric = string => /^[a-zA-Z0-9]*$/.test(string);
+
+export default isAlphaNumeric;

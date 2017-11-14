@@ -10,13 +10,13 @@ const map = {
  * @param {string} string - The string to replace HTML characters.
  * @returns {string} Returns string with HTML characters replaced with corresponding HTML entities
  * @example
- * // returns '&lt;p&gt;my string&lt;/p&gt;'
  * escapeHtml('<p>my string</p>');
+ * // returns '&lt;p&gt;my string&lt;/p&gt;'
  * @example
- * // returns 'my string'
  * escapeHtml('my string');
+ * // returns 'my string'
  */
-export default (string) => {
+const escapeHtml = (string) => {
   const reg = new RegExp(/["'<>]/);
   let match;
   let s = string;
@@ -26,3 +26,5 @@ export default (string) => {
   }
   return s;
 };
+
+export default escapeHtml;

@@ -1,4 +1,4 @@
-# @quillio/takeWhile  
+# @quillio/stringy-functions  
 
 <div class="social-buttons">
     <a href="https://twitter.com/Quillio_io" class="btn twitter-follow-btn">
@@ -31,7 +31,7 @@ Using npm:
 $ npm install --save @quillio/stringy
 
 // Cherry-pick only what you need
-$ npm install --save @quillio/stringy-takeWhile
+$ npm install --save @quillio/stringy-stringy-functions
 ```
 
 Use in Node.js: 
@@ -40,7 +40,7 @@ Use in Node.js:
 const stringy = require('@quillio/stringy')
 
 // Cherry-pick methods for smaller bundles
-const takeWhile = require('@quillio/stringy-takeWhile')
+const stringy-functions = require('@quillio/stringy-stringy-functions')
 ```
 
 For additional documentation please use the 
@@ -57,8 +57,8 @@ To contribute please read the
 [waffle]: http://waffle.io/Quillio/stringy
 [waffle-badge]: https://img.shields.io/waffle/label/Quillio/stringy.svg
 
-[npm]: https://www.npmjs.org/package/@quillio/stringy-takeWhile
-[npm-badge]: https://img.shields.io/npm/v/@quillio/stringy-takeWhile.svg
+[npm]: https://www.npmjs.org/package/@quillio/stringy-stringy-functions
+[npm-badge]: https://img.shields.io/npm/v/@quillio/stringy-stringy-functions.svg
 
 [npm-deps]: https://david-dm.org/quillio/stringy
 [npm-deps-badge]: https://david-dm.org/quillio/stringy/status.svg

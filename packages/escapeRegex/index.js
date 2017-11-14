@@ -3,10 +3,12 @@
  * @param {string} string - The string to escape regex characters.
  * @returns {string} Returns string with escaped regex characters.
  * @example
- * // returns '\.\*'
  * endsWith('.*');
+ * // returns '\.\*'
  * @example
- * // returns 'my string'
  * endsWith('my string');
+ * // returns 'my string'
  */
-export default string => string.replace(/[-[\]/{}()*+?.\\^$|]/g, match => `\\${match}`);
+const escapeRegex = string => string.replace(/[-[\]/{}()*+?.\\^$|]/g, match => `\\${match}`);
+
+export default escapeRegex;

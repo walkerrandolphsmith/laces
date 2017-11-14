@@ -534,14 +534,13 @@ main .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px 20px 0;
+  padding: 10px 20px 40px 0;
 }
 
 .signature {
   font-size: 40px;
   font-weight: bold;
   margin: 0;
-  padding-bottom: 20px;
 }
 
 .method .links {

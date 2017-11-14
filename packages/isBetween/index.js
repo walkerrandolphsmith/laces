@@ -5,18 +5,20 @@
  * @param {string} [rightPattern=''] - The pattern to match at the end of the string.
  * @returns {boolean} Returns true if the string is surrounded by patterns
  * @example
- * // returns true
  * isBetween('my string');
- * @example
  * // returns true
+ * @example
  * isBetween('my string', 'my');
- * @example
  * // returns true
- * isBetween('my string', 'my', 'ing');
  * @example
- * // returns false
+ * isBetween('my string', 'my', 'ing');
+ * // returns true
+ * @example
  * isBetween('my string', '', 'eng');
+ * // returns false
  */
-export default (string, leftPattern = '', rightPattern = '') => (
+const isBetween = (string, leftPattern = '', rightPattern = '') => (
   string.indexOf(leftPattern) > -1 && string.indexOf(rightPattern) > -1
 );
+
+export default isBetween;

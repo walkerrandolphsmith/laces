@@ -4,13 +4,13 @@
  * @param {string} compareTo - The string to compare to the subject string.
  * @returns {boolean} Returns true if the string are equal
  * @example
- * // returns true
  * isMatch('password', 'password');
+ * // returns true
  * @example
- * // returns false
  * isMatch('password', 'wrong password');
+ * // returns false
  */
-export default (subject, compareTo) => {
+const isMatch = (subject, compareTo) => {
   let isMismatch = subject.length === compareTo.length ? 0 : 1;
   const z = isMismatch ? subject : compareTo;
 
@@ -20,3 +20,5 @@ export default (subject, compareTo) => {
 
   return !isMismatch;
 };
+
+export default isMatch;

@@ -4,10 +4,12 @@
  * @param {string} [pattern=' '] - The pattern to remove.
  * @returns {string} Returns a string with the pattern omitted from the beginning.
  * @example
- * // returns 'my string'
  * toLowerCase('my string');
+ * // returns 'my string'
  * @example
- * // returns 'my stringX'
  * toLowerCase('Xmy stringX', 'X');
+ * // returns 'my stringX'
  */
-export default (string, pattern = ' ') => string.replace(new RegExp(`^\\${pattern}*`), '');
+const trimLeft = (string, pattern = ' ') => string.replace(new RegExp(`^\\${pattern}*`), '');
+
+export default trimLeft;

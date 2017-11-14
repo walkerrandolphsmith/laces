@@ -3,7 +3,9 @@
  * @param {string} string - The string to convert to upper case.
  * @returns {string} Returns a upper cased string.
  * @example
- * // returns 'MY STRING'
  * toUpperCase('My String');
+ * // returns 'MY STRING'
  */
-export default string => string.toUpperCase();
+const toUpperCase = string => string.toUpperCase();
+
+export default toUpperCase;

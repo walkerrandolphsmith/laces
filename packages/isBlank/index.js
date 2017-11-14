@@ -3,16 +3,18 @@
  * @param {string} string - The string to query.
  * @returns {boolean} Returns true if the string only contains whitespace
  * @example
- * // returns true
  * isBlank('');
- * @example
  * // returns true
+ * @example
  * isBlank(' ');
- * @example
  * // returns true
- * isBlank('\n');
  * @example
- * // returns false
+ * isBlank('\n');
+ * // returns true
+ * @example
  * isBlank('my string');
+ * // returns false
  */
-export default (string = null) => string === null || string.trim() === '';
+const isBlank = (string = null) => string === null || string.trim() === '';
+
+export default isBlank;

@@ -1,5 +1,4 @@
 import React from 'react'
-import { groups, generateMethods, generateQuickStart } from './../metadata';
 import Link from 'gatsby-link'
 import enhanceWithClickOutside from 'react-click-outside';
 
@@ -110,10 +109,57 @@ class GitterAside extends React.Component {
 
 const SmartGitterAside = enhanceWithClickOutside(GitterAside);
 
+const Method = (props) => {
+    const { name, description, source, npm, feedback, example, returns, params } = props;
+
+    return (
+        <div
+            className="method">
+            <header>
+                <h3 className="signature" id={name}>{name}</h3>
+                <ul className="links">
+                    <a href={source} target="_blank">source</a>
+                    <a href={npm} target="_blank">npm</a>
+                    <a href={feedback} target="_blank">docs</a>
+                </ul>
+            </header>
+            <p>{description}</p>
+            <h3>Arguments</h3>
+            <ul>
+                {params.map(
+                    (param, i) => (
+                        <li key={i}>
+                            {
+                                param.default
+                                    ? <code>[{param.name}={param.default}]</code>
+                                    : <code>{param.name}</code>
+                            }
+                            <em> ({param.type})</em>
+                            : {param.description}
+                        </li>
+                    )
+                )}
+            </ul>
+            <h3>Returns</h3>
+            <p>
+                <em>({returns.type})</em>
+                : {returns.description}
+            </p>
+            <h3>Examples</h3>
+            <div className="gatsby-highlight">
+                <pre className="language-js">
+                    <code dangerouslySetInnerHTML={{__html: example }} />
+                </pre>
+            </div>
+        </div>
+    )
+};
+
 class SmartIndexPage extends React.Component {
     constructor(props, context) {
         super(props, context);
-        const methods = generateMethods(props.data.allMarkdownRemark.edges);
+        const root = props.data.allDocumentationJs; //allMarkdownRemark;
+        const methods = generateMethods(root.edges);
         const quickStart = generateQuickStart(props.data.allMarkdownRemark.edges);
         this.state = {
             filter: '',
@@ -287,19 +333,7 @@ class SmartIndexPage extends React.Component {
                     <div className="content" ref={(content) => this.content = content}>
                         <div className="quick-start" dangerouslySetInnerHTML={{ __html: this.state.quickStart }} />
                         {this.state.methods.map(
-                            (method, i) => (<div
-                                key={i}
-                                className="method">
-                                    <header>
-                                        <h3 className="signature" id={method.name}>{method.name}</h3>
-                                        <ul className="links">
-                                            <a href={method.source} target="_blank">source</a>
-                                            <a href={method.npm} target="_blank">npm</a>
-                                            <a href={method.feedback} target="_blank">docs</a>
-                                        </ul>
-                                    </header>
-                                    <div dangerouslySetInnerHTML={{__html: method.content }} />
-                            </div>)
+                            (method, i) => <Method key={i} {...method} />
                         )}
                     </div>
                     <button
@@ -320,17 +354,196 @@ class SmartIndexPage extends React.Component {
 
 export default SmartIndexPage;
 
+const groups = [
+    {
+        header: 'Query',
+        items: [
+            'endsWith',
+            'isAlpha',
+            'isAlphaNumeric',
+            'isBetween',
+            'isBlank',
+            'isEmpty',
+            'isInteger',
+            'isMatch',
+            'isNaturalNumber',
+            'isNumeric',
+            'isReal',
+            'startsWith',
+        ]
+    },
+    {
+        header: 'Manipulations',
+        items: [
+            'camalize',
+            'capitalize',
+            'charAt',
+            'chompLeft',
+            'chompRight',
+            'clamp',
+            'collapse',
+            'escapeHtml',
+            'escapeRegex',
+            'latinise',
+            'padLeft',
+            'padRight',
+            'remove',
+            'removeFirst',
+            'repeat',
+            'replace',
+            'reverse',
+            'slugify',
+            'template',
+            'takeFirst',
+            'takeLast',
+            'takeWhile',
+            'toCamelCase',
+            'toKebabCase',
+            'toLowerCase',
+            'toSnakeCase',
+            'toSpaceCase',
+            'toUpperCase',
+            'trim',
+            'trimLeft',
+            'trimRight',
+        ]
+    },
+    {
+        header: 'Unwrap',
+        items: [
+            'split',
+            'toChars',
+            'toCodePoints',
+            'toLines',
+            'toWords',
+        ]
+    },
+    {
+        header: 'Wrap',
+        items: [
+            'chain'
+        ]
+    },
+];
+
+const methods = groups
+    .reduce(
+        (names, group) => names.concat(group.items), []
+    )
+    .map(
+        name => ({
+            name: name,
+        })
+    )
+    .map(method => ({
+        ...method,
+        source: `https://www.github.com/quillio/stringy/blob/master/packages/${method.name}/index.js`,
+        npm: `https://www.npmjs.com/package/@quillio/stringy-${method.name}`,
+        feedback: `https://www.github.com/quillio/stringy/blob/master/packages/${method.name}/README.md`,
+    }))
+    .reduce(
+        (map, method) => ({ ...map, [method.name]: method }),{}
+    );
+
+export const generateMethods = (edges) => {
+    edges.forEach(({ node }) => {
+        if(node.name && node.name !== 'index' && node.name !== 'Chain') {
+            const {
+                name,
+                description,
+                returns,
+                params,
+                examples
+            } = node;
+
+            methods[name] = {
+                ...methods[name],
+                name: name,
+                description: description.internal.content,
+                returns: {
+                    name: returns[0].title,
+                    type: returns[0].type.name,
+                    description: returns[0].description.internal.content
+                },
+                params: params.map(param => ({
+                    name: param.name,
+                    type: param.type.name,
+                    default: param.default,
+                    description: param.description.internal.content
+                })),
+                example: examples
+                    .map(example => example.highlighted)
+                    .reduce((all, example) => all + '\n\n' + example, '')
+                    .slice(2)
+            };
+        }
+    });
+
+    return Object
+        .keys(methods)
+        .reduce(
+            (list, key) => list.concat(
+                {
+                    name: key,
+                    ...methods[key]
+                }
+            ),
+            []
+        );
+};
+
+const generateQuickStart = (edges) => {
+    const edge = edges.find(edge => edge.node.id.includes('stringy/README.md'))
+
+    return edge.node.html.replace(/<h1>(.*)<\/h1>/, () => '<h1>Hello World</h1>')
+};
+
 export const pageQuery = graphql`
 query data {
   allMarkdownRemark {
     edges {
       node {
-        html
-        frontmatter {
+        id,
+       html
+      }
+    }
+  }
+  allDocumentationJs {
+    edges {
+      node {
+        name
+        description {
+          internal {
+            content
+          }
+        }
+        examples {
+          highlighted,
+        }
+        returns {
           title
+          type {
+            name
+          }
+          description {
+            internal {
+              content
+            }
+          }
+        }
+        params {
+          name
+          default
+          type {
+            name
+          }
+          description {
+            internal {
+              content
+            }
+          }
         }
       }
     }
   }
-}
-`;
+}`;

@@ -12,18 +12,18 @@ import { manipulations as functions } from '@quillio/stringy-functions';
  * @param {string} string - The string to chain operations from.
  * @returns {Chain} Returns Chain
  * @example
- * // returns 'my string'
  * chain('my string')
  *      .value();
+ * // returns 'my string'
  * @example
- * // returns 'MyStringMyString'
  * chain('my string')
  *      .toCamelCase()
  *      .capitalize()
  *      .repeat(2)
  *      .value();
+ * // returns 'MyStringMyString'
  */
-export default function (string) {
+const chain = function (string) {
   let s = string;
 
   const wrappedFns = Object
@@ -47,4 +47,6 @@ export default function (string) {
     // value returns the wrapped string
     value: () => s,
   };
-}
+};
+
+export default chain;
