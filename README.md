@@ -62,7 +62,7 @@ To contribute please read the
 [npm-dev-deps]: https://david-dm.org/walkerrandolphsmith/laces?type=dev
 [npm-dev-deps-badge]: https://david-dm.org/walkerrandolphsmith/laces/dev-status.svg
 
-[code-cov]: https://coveralls.io/github/walkerrandolphsmith/laces?branch=maste
+[code-cov]: https://coveralls.io/github/walkerrandolphsmith/laces?branch=master
 [code-cov-badge]: https://coveralls.io/repos/github/walkerrandolphsmith/laces/badge.svg?branch=master
 
 [code-style]: https://github.com/airbnb/javascript

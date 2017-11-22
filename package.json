@@ -41,7 +41,6 @@
   },
   "homepage": "https://github.com/walkerrandolphsmith/laces#readme",
   "devDependencies": {
-    "@commitlint/cli": "^4.3.0",
     "ava": "^0.23.0",
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
