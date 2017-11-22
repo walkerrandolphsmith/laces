@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const { lstatSync, readdirSync } = require('fs');
 const { join, resolve } = require('path');
 
-const buildConfig = (buildLibraryTarget) => (packageName, entry, outputPath) => {
+const buildConfig = (buildTarget) => (packageName, entry, outputPath) => {
     return ({
         target: 'web',
         entry: entry,
@@ -16,7 +16,7 @@ const buildConfig = (buildLibraryTarget) => (packageName, entry, outputPath) => 
                 path: outputPath,
                 filename: 'index.js',
             },
-            buildLibraryTarget(packageName)
+            buildTarget(packageName)
         ),
         module: {
             rules: [
@@ -44,35 +44,53 @@ const buildConfig = (buildLibraryTarget) => (packageName, entry, outputPath) => 
     });
 };
 
-const buildWebpackConfig = buildConfig((packageName) => ({
+const buildUniversalConfig = buildConfig((packageName) => ({
     library: packageName,
     libraryTarget: 'umd',
     libraryExport: 'default',
 }));
 
+const buildNodeConfig = buildConfig((packageName) => ({
+    library: packageName,
+    libraryTarget: 'commonjs2',
+    libraryExport: 'default',
+}));
+
+const packagesPath = resolve(__dirname, '..', 'packages');
+const isDirectory = source => lstatSync(source).isDirectory();
+const getDirectories = source => readdirSync(source)
+    .map(name => join(source, name))
+    .filter(isDirectory)
+    .map(path => path.split('/').pop())
+    .map(relativePath => `./packages/${relativePath}`);
+
+const packagePaths = getDirectories(packagesPath);
+
 gulp.task('build', (callback) => {
-    const packagesPath = resolve(__dirname, '..', 'packages');
-
-    const isDirectory = source => lstatSync(source).isDirectory();
-    const getDirectories = source => readdirSync(source)
-        .map(name => join(source, name))
-        .filter(isDirectory)
-        .map(path => path.split('/').pop())
-        .map(relativePath => `./packages/${relativePath}`);
-
-    const packagePaths = getDirectories(packagesPath);
-
     packagePaths.forEach(path => {
-        gulp.src(`${path}/index.js`)
-            .pipe(babel())
-            .pipe(gulp.dest(`${path}/dist`))
-    });
+        const packageName = path.split('packages/')[1];
+        const output = resolve(__dirname, '..', path, 'dist');
+        const entry = resolve(__dirname, '..', path, 'index.js');
 
+        const config = buildNodeConfig(packageName, entry, output);
+
+        webpack(config, function(err, stats) {
+            if (err) throw new gutil.PluginError('webpack', err);
+            gutil.log('[webpack]', stats.toString({
+                colors: true,
+                progress: true
+            }));
+        });
+    });
+    callback();
+});
+
+gulp.task('build:browser', (callback) => {
     packagePaths.forEach(path => {
         const packageName = path.split('packages/')[1];
         const output = resolve(__dirname, '..', `${path}/dist`);
         const entry = resolve(output, 'index.js');
-        const config = buildWebpackConfig(packageName, entry, output);
+        const config = buildUniversalConfig(packageName, entry, output);
 
         webpack(config, function(err, stats) {
             if (err) throw new gutil.PluginError('webpack', err);
