@@ -437,9 +437,9 @@ const methods = groups
     )
     .map(method => ({
         ...method,
-        source: `https://www.github.com/quillio/stringy/blob/master/packages/${method.name}/index.js`,
-        npm: `https://www.npmjs.com/package/@quillio/stringy-${method.name}`,
-        feedback: `https://www.github.com/quillio/stringy/blob/master/packages/${method.name}/README.md`,
+        source: `https://www.github.com/walkerrandolphsmith/laces/blob/master/packages/${method.name}/index.js`,
+        npm: `https://www.npmjs.com/package/@laces/${method.name}`,
+        feedback: `https://www.github.com/walkerrandolphsmith/laces/blob/master/packages/${method.name}/README.md`,
     }))
     .reduce(
         (map, method) => ({ ...map, [method.name]: method }),{}
@@ -493,7 +493,7 @@ export const generateMethods = (edges) => {
 };
 
 const generateQuickStart = (edges) => {
-    const edge = edges.find(edge => edge.node.id.includes('stringy/README.md'))
+    const edge = edges.find(edge => edge.node.id.includes('laces/README.md'))
 
     return edge.node.html.replace(/<h1>(.*)<\/h1>/, () => '<h1>Hello World</h1>')
 };

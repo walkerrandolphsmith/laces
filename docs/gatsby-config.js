@@ -1,9 +1,9 @@
 const url = process.env.GATSBY_URL || 'http://walkerrandolphsmith.com/laces/';
 
 module.exports = {
-  pathPrefix: '/stringy',
+  pathPrefix: '/laces',
   siteMetadata: {
-    title: 'Stringy',
+    title: 'Laces',
     description: 'Collection of common string utilities in JavaScript',
     url: url,
     author: 'walkerrandolphsmith',
