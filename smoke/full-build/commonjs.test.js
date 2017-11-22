@@ -1,4 +1,9 @@
 const test = require('ava');
-const sut = require('./../../packages/toCamelCase').default;
+const laces = require('./../../packages/laces/dist');
+const sut = laces.toCamelCase;
 
-test('Replace whitespace', t => t.is(sut('my other var'), 'myOtherVar'));
+test('Replace whitespace', t => {
+
+
+    t.is(sut('my other var'), 'myOtherVar')
+});

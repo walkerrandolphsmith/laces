@@ -1,7 +1,7 @@
-import stringy from '@laces/functions';
+import functions from '@laces/functions';
 import chain from '@laces/chain';
 
 export default {
-  ...stringy,
+  ...functions,
   chain,
 };

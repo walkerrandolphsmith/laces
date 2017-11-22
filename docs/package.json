@@ -10,7 +10,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "main": "n/a",
   "scripts": {
     "start": "GATSBY_URL=localhost:8000/ gatsby develop",
@@ -24,6 +24,7 @@
   "dependencies": {
     "gatsby-link": "^1.6.22",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-remark-images": "^1.5.32",
     "react-click-outside": "^3.0.0"
   },
   "devDependencies": {

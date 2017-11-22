@@ -1,8 +1,19 @@
 {
   "lerna": "2.0.0-rc.4",
-  "npmClient": "yarn",
+  "npmClient": "npm",
   "packages": [
     "packages/*"
   ],
+  "commands": {
+    "bootstrap": {
+      "ignore": [
+        "@laces/**/index.js",
+        "@laces/**/index.test.js",
+        "@laces/**/node_modules"
+      ]
+    },
+    "version": "independent",
+    "npmClient": "npm"
+  },
   "version": "0.0.5"
 }

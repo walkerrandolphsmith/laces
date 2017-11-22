@@ -1,4 +1,4 @@
-import { manipulations as functions } from '@laces/functions';
+import functions from '@laces/functions';
 
 /**
  * @typedef {object} Chain
@@ -23,7 +23,7 @@ import { manipulations as functions } from '@laces/functions';
  *      .value();
  * // returns 'MyStringMyString'
  */
-const chain = function (string) {
+function chain(string) {
   let s = string;
 
   const wrappedFns = Object
@@ -47,6 +47,6 @@ const chain = function (string) {
     // value returns the wrapped string
     value: () => s,
   };
-};
+}
 
 export default chain;

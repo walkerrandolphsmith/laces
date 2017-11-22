@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Collection of common string validators",
   "main": "./dist/index.js",
+  "files": ["dist"],
   "scripts": {},
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
   "contributors": [
     "walkerrandolphsmith@gmail.com"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/walkerrandolphsmith/laces/issues"
   },

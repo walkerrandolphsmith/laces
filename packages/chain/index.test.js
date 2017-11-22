@@ -1,7 +1,11 @@
 import test from 'ava';
 import sut from './index';
 
-test('identity', t => t.is(sut('1').value(), '1'));
+test('identity', t => {
+  const actual = sut('1')
+    .value();
+  t.is(actual, '1');
+});
 
 test('simple chain', (t) => {
   const actual = sut('myVar')
