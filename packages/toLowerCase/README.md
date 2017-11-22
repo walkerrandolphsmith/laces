@@ -33,7 +33,7 @@ $ npm install --save @laces/laces-toLowerCase
 Use in Node.js: 
 ```js
 // Load the full build
-const stringy = require('@laces/laces')
+const laces = require('@laces/laces')
 
 // Cherry-pick methods for smaller bundles
 const toLowerCase = require('@laces/laces-toLowerCase')

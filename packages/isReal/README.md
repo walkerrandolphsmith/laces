@@ -33,7 +33,7 @@ $ npm install --save @laces/laces-isReal
 Use in Node.js: 
 ```js
 // Load the full build
-const stringy = require('@laces/laces')
+const laces = require('@laces/laces')
 
 // Cherry-pick methods for smaller bundles
 const isReal = require('@laces/laces-isReal')

@@ -33,7 +33,7 @@ $ npm install --save @laces/laces-takeWhile
 Use in Node.js: 
 ```js
 // Load the full build
-const stringy = require('@laces/laces')
+const laces = require('@laces/laces')
 
 // Cherry-pick methods for smaller bundles
 const takeWhile = require('@laces/laces-takeWhile')

@@ -33,10 +33,10 @@ $ npm install --save @laces/laces-stringy
 Use in Node.js: 
 ```js
 // Load the full build
-const stringy = require('@laces/laces')
+const laces = require('@laces/laces')
 
 // Cherry-pick methods for smaller bundles
-const stringy = require('@laces/laces-stringy')
+const laces = require('@laces/laces-stringy')
 ```
 
 For additional documentation please use the 
