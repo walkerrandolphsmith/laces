@@ -3,7 +3,7 @@
 <div style="display:flex;align-items:center;padding-bottom: 20px;">
     <img
         alt="Logo"
-        style="width: 40px;"
+        width="40px"
         src="https://cdn.rawgit.com/walkerrandolphsmith/laces/83820c97/docs/static/logo.png"
     />
     <span style="padding-left: 5px;">
