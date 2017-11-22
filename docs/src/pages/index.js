@@ -188,7 +188,7 @@ class SmartIndexPage extends React.Component {
         window.addEventListener('keydown', this.onWindowKeyDown);
 
         ((window.gitter = {}).chat = {}).options = {
-            room: 'quillio-io/Lobby',
+            room: 'laces-io/laces',
             activationElement: '.gitter-btn',
             showChatByDefault: false,
             targetElement: '.gitter-sidebar'
