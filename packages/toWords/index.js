@@ -1,8 +1,8 @@
-import toSpaceCase from '@quillio/stringy-toSpaceCase';
+import toSpaceCase from '@laces/toSpaceCase';
 
 /**
  * Convert to an array of words
- * @requires module:@quillio/stringy-toSpaceCase
+ * @requires module:@laces/toSpaceCase
  * @param {string} string - The string to convert to an array.
  * @returns {Array<string>} Returns an array of words from the string
  * @example

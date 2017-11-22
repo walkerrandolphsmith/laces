@@ -1,26 +1,26 @@
 {
-  "name": "@quillio/stringy-toLowerCase",
+  "name": "@laces/toLowerCase",
   "version": "0.0.1",
   "description": "Colletion of string utilities in javascript",
   "main": "./dist/index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/quillio/stringy.git"
+    "url": "git+https://github.com/walkerrandolphsmith/laces.git"
   },
   "keywords": [
     "javascript",
     "lowerCase"
   ],
-  "author": "admin@quillio.io",
+  "author": "walkerrandolphsmith@gmail.com",
   "contributors": [
     "walkerrandolphsmith@gmail.com"
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/quillio/stringy/issues"
+    "url": "https://github.com/walkerrandolphsmith/laces/issues"
   },
-  "homepage": "https://github.com/quillio/stringy#readme",
+  "homepage": "https://github.com/walkerrandolphsmith/laces#readme",
   "dependencies": {
 
   }

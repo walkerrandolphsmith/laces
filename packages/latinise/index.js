@@ -1,4 +1,4 @@
-import toChars from '@quillio/stringy-toChars';
+import toChars from '@laces/toChars';
 
 const map = {
   Á: 'A',
@@ -829,7 +829,7 @@ const map = {
 
 /**
  * Replaces Latin characters with corresponding English characters
- * @requires module:@quillio/stringy-toChars
+ * @requires module:@laces/toChars
  * @param {string} string - The string to replace Latin characters from.
  * @returns {string} Returns string with replaced Latin characters.
  * @example

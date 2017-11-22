@@ -1,4 +1,4 @@
-import { manipulations as functions } from '@quillio/stringy-functions';
+import { manipulations as functions } from '@laces/functions';
 
 /**
  * @typedef {object} Chain
@@ -8,7 +8,7 @@ import { manipulations as functions } from '@quillio/stringy-functions';
 
 /**
  * Creates a fluent interface to chain stringy operations together.
- * @requires module:@quillio/stringy-functions
+ * @requires module:@laces/functions
  * @param {string} string - The string to chain operations from.
  * @returns {Chain} Returns Chain
  * @example

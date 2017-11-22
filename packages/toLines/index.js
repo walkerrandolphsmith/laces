@@ -1,8 +1,8 @@
-import toChars from '@quillio/stringy-toChars';
+import toChars from '@laces/toChars';
 
 /**
  * Create an array of lines
- * @requires module:@quillio/stringy-toChars
+ * @requires module:@laces/toChars
  * @param {string} string - The string to convert to lines.
  * @param {string} delimiter - The pattern to split lines on.
  * @returns {Array<string>} Returns a kebab cased string.

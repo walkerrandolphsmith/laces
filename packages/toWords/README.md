@@ -1,15 +1,11 @@
 # @quillio/toWords  
 
 <div class="social-buttons">
-    <a href="https://twitter.com/Quillio_io" class="btn twitter-follow-btn">
+    <a href="https://github.com/walkerrandolphsmith/laces" class="btn gh-follow-btn">
         <i></i>
-        <span class="label">Follow @quillio</span>
+        <span class="label">Follow @laces</span>
     </a>
-    <a href="https://github.com/quillio" class="btn gh-follow-btn">
-        <i></i>
-        <span class="label">Follow @quillio</span>
-    </a>
-    <a href="https://github.com/quillio/stringy" class="btn gh-follow-btn">
+    <a href="https://github.com/walkerrandolphsmith/laces" class="btn gh-follow-btn">
         <i></i>
         <span class="label">Star</span>
     </a>
@@ -28,46 +24,46 @@
 Using npm:
 ```sh
 // Install full build
-$ npm install --save @quillio/stringy
+$ npm install --save @laces/laces
 
 // Cherry-pick only what you need
-$ npm install --save @quillio/stringy-toWords
+$ npm install --save @laces/laces-toWords
 ```
 
 Use in Node.js: 
 ```js
 // Load the full build
-const stringy = require('@quillio/stringy')
+const stringy = require('@laces/laces')
 
 // Cherry-pick methods for smaller bundles
-const toWords = require('@quillio/stringy-toWords')
+const toWords = require('@laces/laces-toWords')
 ```
 
 For additional documentation please use the 
 [documentation site](https://quillio.io/stringy)
 
 To contribute please read the
-[contributing guide](https://github.com/quillio/stringy/blob/master/CONTRIBUTING.md) and
-[code of conduct](https://github.com/quillio/stringy/blob/master/CODE_OF_CONDUCT.md).
+[contributing guide](https://github.com/walkerrandolphsmith/laces/blob/master/CONTRIBUTING.md) and
+[code of conduct](https://github.com/walkerrandolphsmith/laces/blob/master/CODE_OF_CONDUCT.md).
 
 
-[ci]: https://travis-ci.org/Quillio/stringy
-[ci-badge]: https://travis-ci.org/Quillio/stringy.svg?branch=master
+[ci]: https://travis-ci.org/walkerrandolphsmith/laces
+[ci-badge]: https://travis-ci.org/walkerrandolphsmith/laces.svg?branch=master
 
-[waffle]: http://waffle.io/Quillio/stringy
-[waffle-badge]: https://img.shields.io/waffle/label/Quillio/stringy.svg
+[waffle]: http://waffle.io/walkerrandolphsmith/laces
+[waffle-badge]: https://img.shields.io/waffle/label/walkerrandolphsmith/laces.svg
 
-[npm]: https://www.npmjs.org/package/@quillio/stringy-toWords
-[npm-badge]: https://img.shields.io/npm/v/@quillio/stringy-toWords.svg
+[npm]: https://www.npmjs.org/package/@laces/laces-toWords
+[npm-badge]: https://img.shields.io/npm/v/@laces/laces-toWords.svg
 
-[npm-deps]: https://david-dm.org/quillio/stringy
-[npm-deps-badge]: https://david-dm.org/quillio/stringy/status.svg
+[npm-deps]: https://david-dm.org/walkerrandolphsmith/laces
+[npm-deps-badge]: https://david-dm.org/walkerrandolphsmith/laces/status.svg
 
-[npm-dev-deps]: https://david-dm.org/quillio/stringy?type=dev
-[npm-dev-deps-badge]: https://david-dm.org/quillio/stringy/dev-status.svg
+[npm-dev-deps]: https://david-dm.org/walkerrandolphsmith/laces?type=dev
+[npm-dev-deps-badge]: https://david-dm.org/walkerrandolphsmith/laces/dev-status.svg
 
-[code-cov]: https://coveralls.io/github/Quillio/stringy
-[code-cov-badge]: https://coveralls.io/repos/github/Quillio/stringy/badge.svg
+[code-cov]: https://coveralls.io/github/walkerrandolphsmith/laces
+[code-cov-badge]: https://coveralls.io/repos/github/walkerrandolphsmith/laces/badge.svg
 
 [code-style]: https://github.com/airbnb/javascript
 [code-style-badge]: https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg

@@ -1,8 +1,8 @@
-import capitalize from '@quillio/stringy-capitalize';
+import capitalize from '@laces/capitalize';
 
 /**
  * Convert to camel case
- * @requires module:@quillio/stringy-capitalize
+ * @requires module:@laces/capitalize
  * @param {string} string - The string to convert to camel case.
  * @returns {string} Returns a camel cased string.
  * @example

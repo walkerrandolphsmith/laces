@@ -1,4 +1,4 @@
-import isBlank from '@quillio/stringy-isBlank';
+import isBlank from '@laces/isBlank';
 
 const defaultConfig = {
   integers: true,
@@ -7,7 +7,7 @@ const defaultConfig = {
 
 /**
  * Determines if a string represents a valid number
- * @requires module:@quillio/stringy-isBlank
+ * @requires module:@laces/isBlank
  * @param {string} string - The string to query.
  * @param {Object} config - Configuration to specify what numbers sets to include
  * @returns {boolean} Returns true if the string represents a valid number

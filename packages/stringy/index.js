@@ -1,5 +1,5 @@
-import stringy from '@quillio/stringy-functions';
-import chain from '@quillio/stringy-chain';
+import stringy from '@laces/functions';
+import chain from '@laces/chain';
 
 export default {
   ...stringy,

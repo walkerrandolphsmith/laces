@@ -1,8 +1,8 @@
-import isBlank from '@quillio/stringy-isBlank';
+import isBlank from '@laces/isBlank';
 
 /**
  * Determines if a string represents a valid real number
- * @requires module:@quillio/stringy-isBlank
+ * @requires module:@laces/isBlank
  * @param {string} string - The string to query.
  * @returns {boolean} Returns true if the string represents a valid real number
  * @example

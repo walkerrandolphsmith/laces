@@ -4,12 +4,12 @@
 Coming soon. Thanks for your patience.
 
 ## Feature Requests
-Submit features  requests and issues to the [issue tracker](https://github.com/quillio/stringy/issues). Please search for similar requests within the [closed issues](https://github.com/quillio/stringy/issues?q=is%3Aissue+is%3Aclosed) before submitting a new request.
+Submit features  requests and issues to the [issue tracker](https://github.com/walkerrandolphsmith/laces/issues). Please search for similar requests within the [closed issues](https://github.com/walkerrandolphsmith/laces/issues?q=is%3Aissue+is%3Aclosed) before submitting a new request.
 
 ## Getting Started
 First Time? Get up a running:
 ```
-git clone git@github.com:quillio/stringy.git
+git clone git@github.com:walkerrandolphsmith/laces.git
 cd ./stringy
 npm install
 ```

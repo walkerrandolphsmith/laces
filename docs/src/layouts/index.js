@@ -43,7 +43,7 @@ const TemplateWrapper = ({ children, data }) => {
                 <meta name="twitter:label1" content="Written by" />
                 <meta name="twitter:data1" content={author} />
 
-                <link rel="canonical" href="http://quillio.github.io/" />
+                <link rel="canonical" href="http://walkerrandolphsmith.github.io/" />
                 <link rel="icon" type="image/png" href={logo} />
                 <link rel="apple-touch-icon" sizes="57x57" href={smallLogo} />
                 <link rel="apple-touch-icon" sizes="72x72" href={mediumLogo} />

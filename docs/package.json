@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "@quillio/stringy-docs-site",
+  "name": "@laces/docs-site",
   "description": "Documentation for stringy library",
   "version": "0.0.1",
-  "author": "public@quillio.io",
+  "author": "walkerrandolphsmith@gmail.com",
   "contributors": [
     "walkerrandolphsmith@gmail.com"
   ],

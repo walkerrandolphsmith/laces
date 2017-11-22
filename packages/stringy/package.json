@@ -1,28 +1,28 @@
 {
-  "name": "@quillio/stringy",
+  "name": "@laces/laces",
   "version": "0.0.1",
   "description": "Collection of common string utilities",
   "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/quillio/stringy.git"
+    "url": "git+https://github.com/walkerrandolphsmith/laces.git"
   },
   "keywords": [
     "javascript",
     "data structures"
   ],
-  "author": "admin@quillio.io",
+  "author": "walkerrandolphsmith@gmail.com",
   "contributors": [
     "walkerrandolphsmith@gmail.com"
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/quillio/stringy/issues"
+    "url": "https://github.com/walkerrandolphsmith/laces/issues"
   },
-  "homepage": "https://github.com/quillio/stringy#readme",
+  "homepage": "https://github.com/walkerrandolphsmith/laces#readme",
   "dependencies": {
-    "@quillio/stringy-chain": "0.0.1",
-    "@quillio/stringy-functions": "0.0.1"
+    "@laces/chain": "0.0.1",
+    "@laces/functions": "0.0.1"
   }
 }

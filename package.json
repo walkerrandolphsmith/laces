@@ -1,5 +1,5 @@
 {
-  "name": "@quillio/stringy",
+  "name": "@laces/laces",
   "version": "1.1.0",
   "description": "Common string utilties written in JavaScript",
   "main": "index.js",
@@ -16,13 +16,13 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "docs": "inchjs list --all",
     "bundlesize": "bundlesize",
-    "start": "cd ./docs && npm run develop",
+    "start": "cd ./docs && npm start",
     "deploy:docs": "cd ./docs && npm run deploy",
     "postinstall": "npm run link"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/walkerrandolphsmith/stringy.git"
+    "url": "git+https://github.com/walkerrandolphsmith/laces.git"
   },
   "keywords": [
     "javascript",
@@ -31,16 +31,17 @@
     "library",
     "lib"
   ],
-  "author": "public@quillio.io",
+  "author": "walkerrandolphsmith@gmail.com",
   "contributors": [
     "walkerrandolphsmith@gmail.com"
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/walkerrandolphsmith/stringy/issues"
+    "url": "https://github.com/walkerrandolphsmith/laces/issues"
   },
-  "homepage": "https://github.com/walkerrandolphsmith/stringy#readme",
+  "homepage": "https://github.com/walkerrandolphsmith/laces#readme",
   "devDependencies": {
+    "@commitlint/cli": "^4.3.0",
     "ava": "^0.23.0",
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
@@ -61,6 +62,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
     "gulp-uglify": "^3.0.0",
+    "husky": "^0.14.3",
     "inchjs": "^0.4.1",
     "lerna": "^2.0.0-rc.4",
     "mkdirp": "^0.5.1",

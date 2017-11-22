@@ -1,8 +1,8 @@
-import toCamelCase from '@quillio/stringy-toCamelCase';
+import toCamelCase from '@laces/toCamelCase';
 
 /**
  * Creates a camel cased string.
- * @requires module:@quillio/stringy-toCamelCase
+ * @requires module:@laces/toCamelCase
  * @param {string} string - The string to camel case.
  * @returns {string} Returns the camel cased string
  * @example

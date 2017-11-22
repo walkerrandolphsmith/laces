@@ -1,26 +1,26 @@
 {
-  "name": "@quillio/stringy-isMatch",
+  "name": "@laces/isMatch",
   "version": "0.0.1",
   "description": "Collection of common string validators",
   "main": "./dist/index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/quillio/validators.git"
+    "url": "git+https://github.com/walkerrandolphsmith/laces.git"
   },
   "keywords": [
     "javascript",
     "validators-functions"
   ],
-  "author": "admin@quillio.io",
+  "author": "walkerrandolphsmith@gmail.com",
   "contributors": [
     "walkerrandolphsmith@gmail.com"
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/quillio/validators/issues"
+    "url": "https://github.com/walkerrandolphsmith/laces/issues"
   },
-  "homepage": "https://github.com/quillio/validators#readme",
+  "homepage": "https://github.com/walkerrandolphsmith/laces#readme",
   "dependencies": {
 
   }

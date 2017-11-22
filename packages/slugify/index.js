@@ -1,10 +1,10 @@
-import toKebabCase from '@quillio/stringy-toKebabCase';
-import latinise from '@quillio/stringy-latinise';
+import toKebabCase from '@laces/toKebabCase';
+import latinise from '@laces/latinise';
 
 /**
  * Convert a string to a valid URL
- * @requires module:@quillio/stringy-toKebabCase
- * @requires module:@quillio/stringy-latinise
+ * @requires module:@laces/toKebabCase
+ * @requires module:@laces/latinise
  * @param {string} [string=''] - The string to convert to a valid URL
  * @returns {string} Returns string that represents a valid URL
  * @example

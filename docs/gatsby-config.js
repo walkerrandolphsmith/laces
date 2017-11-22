@@ -1,4 +1,4 @@
-const url = process.env.GATSBY_URL || 'http://quillio.io/stringy/';
+const url = process.env.GATSBY_URL || 'http://walkerrandolphsmith.com/laces/';
 
 module.exports = {
   pathPrefix: '/stringy',
@@ -6,7 +6,7 @@ module.exports = {
     title: 'Stringy',
     description: 'Collection of common string utilities in JavaScript',
     url: url,
-    author: 'quillio',
+    author: 'walkerrandolphsmith',
     logo: url + 'logo.png',
     smallLogo: url + 'apple-icon-57x57.png',
     mediumLogo: url + 'apple-icon-72x72.png',

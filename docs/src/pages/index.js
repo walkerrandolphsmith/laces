@@ -19,7 +19,7 @@ const Logo = () => (
                 />
             </g>
         </svg>
-        <Link to="/">@quillio/Stringy</Link>
+        <Link to="/">@laces/laces</Link>
     </h1>
 );
 
@@ -301,7 +301,7 @@ class SmartIndexPage extends React.Component {
                     <Logo />
                     <div className="links">
                         <span>
-                            <a href="https://www.github.com/quillio/stringy/releases" target="_blank">v0.0.1</a>
+                            <a href="https://www.github.com/walkerrandolphsmith/laces/releases" target="_blank">v0.0.1</a>
                         </span>
                         <span>
                             <button

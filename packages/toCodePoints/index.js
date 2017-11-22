@@ -1,8 +1,8 @@
-import toChars from '@quillio/stringy-toChars';
+import toChars from '@laces/toChars';
 
 /**
  * Convert to an array of code points
- * @requires module:@quillio/stringy-toChars
+ * @requires module:@laces/toChars
  * @param {string} string - The string to convert to an array.
  * @returns {Array<string>} Returns an array of code points from the string.
  * @example

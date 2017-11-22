@@ -1,8 +1,8 @@
-import startsWith from '@quillio/stringy-startsWith';
+import startsWith from '@laces/startsWith';
 
 /**
  * Determines if a string can be represented as a valid integer
- * @requires module:@quillio/stringy-startsWith
+ * @requires module:@laces/startsWith
  * @param {string} string - The string to query.
  * @returns {boolean} Returns true if the string represents a valid integer
  * @example

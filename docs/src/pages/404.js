@@ -43,7 +43,7 @@ const NotFoundPage = () => (
                   />
               </g>
           </svg>
-          <Link to="/" style={a}>@quillio/Stringy</Link>
+          <Link to="/" style={a}>@laces/laces</Link>
       </p>
   </div>
 );
