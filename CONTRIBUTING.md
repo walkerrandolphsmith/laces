@@ -19,6 +19,11 @@ that each directory under the `packages` directory is an independent npm package
 2. Should never import any part of a sibling module by file path
 3. Never be published independently
 
+Get more information about the build, test, and document site commands with
+```
+npm run help
+```
+
 Add dependencies to a package by making `/packages/<package-in-progress>` your working directory and run the following command:
 ```npm install <new-package> --save```
 

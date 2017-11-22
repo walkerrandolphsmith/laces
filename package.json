@@ -4,6 +4,7 @@
   "description": "Common string utilties written in JavaScript",
   "main": "index.js",
   "scripts": {
+    "help": "gulp help",
     "create": "gulp create --name",
     "link": "lerna bootstrap",
     "clean": "lerna clean --yes",
