@@ -493,7 +493,6 @@ export const generateMethods = (edges) => {
 };
 
 const generateQuickStart = (edges) => {
-    debugger;
     const edge = edges.find(edge => edge.node.id.includes('laces/docs'))
 
     return edge.node.html.replace(/<h1>(.*)<\/h1>/, () => '<h1>Hello World</h1>')
