@@ -10,6 +10,7 @@
     "clean": "lerna clean --yes",
     "nuke": "npm run clean && lerna exec -- rm -rf ./dist",
     "build": "gulp build",
+    "package": "gulp package",
     "rebuild": "npm run nuke && npm run build && npm run link",
     "lint": "eslint -c .eslintrc packages",
     "test": "nyc ava",
@@ -75,12 +76,16 @@
   },
   "bundlesize": [
     {
-      "path": "./packages/[^laces]*/dist/index.js",
+      "path": "./dist/npm/[^laces]*.js",
       "maxSize": "3 kB"
     },
     {
-      "path": "./packages/laces*/dist/index.js",
-      "maxSize": "12 kB"
+      "path": "./dist/npm/laces*.js",
+      "maxSize": "30 kB"
+    },
+    {
+      "path": "./dist/browser/*.js",
+      "maxSize": "30 kB"
     }
   ],
   "babel": {
