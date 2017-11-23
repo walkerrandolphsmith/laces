@@ -2,71 +2,83 @@ const gulp = require('gulp');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const gutil = require('gulp-util');
+const mkdirp = require('mkdirp');
 const webpack = require('webpack');
-const { lstatSync, readdirSync } = require('fs');
 const { join, resolve } = require('path');
+const {
+    lstatSync,
+    readdirSync,
+    writeFileSync,
+    readFileSync
+} = require('fs');
 
-const buildConfig = (buildTarget) => (packageName, entry, outputPath) => {
-    return ({
-        target: 'web',
-        entry: entry,
-        output: Object.assign(
-            {},
-            {
-                path: outputPath,
-                filename: 'index.js',
-            },
-            buildTarget(packageName)
-        ),
-        module: {
-            rules: [
-                {
-                    test: /\.js$/,
-                    loaders: ['babel-loader'],
-                    exclude: [/node_modules/]
-                },
-            ]
-        },
-        plugins: [
-            new webpack.optimize.ModuleConcatenationPlugin(),
-            new webpack.DefinePlugin({
-                'process.env.NODE_ENV': '"production"'
-            }),
+const rules = [
+    {
+        test: /\.js$/,
+        loaders: ['babel-loader'],
+        exclude: [/node_modules/]
+    },
+];
 
-            new webpack.optimize.UglifyJsPlugin({
-                minimize : true,
-                compress : {
-                    warnings : false
-                }
-            }),
+const plugins = [
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.DefinePlugin({
+        'process.env.NODE_ENV': '"production"'
+    }),
 
-        ]
-    });
-};
+    new webpack.optimize.UglifyJsPlugin({
+        minimize : true,
+        compress : {
+            warnings : false
+        }
+    }),
+];
 
-const buildUniversalConfig = buildConfig((packageName) => ({
-    library: packageName,
-    libraryTarget: 'umd',
-    libraryExport: 'default',
-}));
+const buildNodeConfig = (packageName, entry, outputPath) => ({
+    target: 'node',
+    entry: entry,
+    output: {
+        path: outputPath,
+        filename: 'index.js',
+        library: packageName,
+        libraryTarget: 'commonjs2',
+        libraryExport: 'default',
+    },
+    module: {
+        rules: rules
+    },
+    plugins: plugins
+});
 
-const buildNodeConfig = buildConfig((packageName) => ({
-    library: packageName,
-    libraryTarget: 'commonjs2',
-    libraryExport: 'default',
-}));
+const buildUniversalConfig = (packageName, entry, outputPath) => ({
+    target: 'web',
+    entry: entry,
+    output: {
+        path: outputPath,
+        filename: 'browser.js',
+        library: packageName,
+        libraryTarget: 'umd',
+        libraryExport: 'default',
+    },
+    module: {
+        rules: rules
+    },
+    plugins: plugins
+});
 
 const packagesPath = resolve(__dirname, '..', 'packages');
 const isDirectory = source => lstatSync(source).isDirectory();
-const getDirectories = source => readdirSync(source)
+const getPackages = source => readdirSync(source)
     .map(name => join(source, name))
     .filter(isDirectory)
-    .map(path => path.split('/').pop())
-    .map(relativePath => `./packages/${relativePath}`);
+    .map(path => path.split('/').pop());
 
-const packagePaths = getDirectories(packagesPath);
+const packages = getPackages(packagesPath);
+const packagePaths = packages.map(relativePath => `./packages/${relativePath}`);
 
-gulp.task('build', (callback) => {
+gulp.task('build', ['build:npm', 'build:browser']);
+
+gulp.task('build:npm', (callback) => {
     packagePaths.forEach(path => {
         const packageName = path.split('packages/')[1];
         const output = resolve(__dirname, '..', path, 'dist');
@@ -89,16 +101,44 @@ gulp.task('build:browser', (callback) => {
     packagePaths.forEach(path => {
         const packageName = path.split('packages/')[1];
         const output = resolve(__dirname, '..', `${path}/dist`);
-        const entry = resolve(output, 'index.js');
+        const entry = resolve(__dirname, '..', path, 'index.js');
         const config = buildUniversalConfig(packageName, entry, output);
 
         webpack(config, function(err, stats) {
             if (err) throw new gutil.PluginError('webpack', err);
             gutil.log('[webpack]', stats.toString({
                 colors: true,
-                progress: true
+                progress: true,
             }));
         });
     });
     callback();
+});
+
+gulp.task('package', ['package:npm', 'package:browser']);
+
+gulp.task('package:npm', () => {
+    mkdirp('./dist/npm');
+
+    packages.map(packageName => {
+        writeFileSync(
+            resolve(__dirname, '..', 'dist', 'npm', `${packageName}.js`),
+            readFileSync(
+                resolve(__dirname, '..', 'packages', packageName, 'dist', 'index.js')
+            ),
+        )
+    })
+});
+
+gulp.task('package:browser', () => {
+    mkdirp('./dist/browser');
+
+    packages.map(packageName => {
+        writeFileSync(
+            resolve(__dirname, '..', 'dist', 'browser', `${packageName}.js`),
+            readFileSync(
+                resolve(__dirname, '..', 'packages', packageName, 'dist', 'browser.js')
+            ),
+        )
+    })
 });
