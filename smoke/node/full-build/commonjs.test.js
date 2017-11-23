@@ -1,5 +1,5 @@
 const test = require('ava');
-const laces = require('./../../packages/laces/dist');
+const laces = require('./../../../packages/laces/dist');
 const sut = laces.toCamelCase;
 
 test('Replace whitespace', t => {

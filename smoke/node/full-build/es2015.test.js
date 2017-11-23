@@ -1,5 +1,5 @@
 import test from 'ava';
-import laces from './../../packages/laces/dist';
+import laces from './../../../packages/laces/dist';
 
 const sut = laces.toCamelCase;
 

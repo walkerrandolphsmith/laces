@@ -1,22 +1,23 @@
 const express = require('express');
-const toCamelCase = require('./../packages/toCamelCase/dist');
+const toCamelCase = require('./../dist/npm/toCamelCase.js');
 
 const app = express();
 
-app.use(express.static('./../packages'));
+app.use(express.static('./../dist'));
 
 app.get('/', (req, res) => {
     res.send(`<html>
         <head></head>
         <body>
-        <span id="x">${toCamelCase('on server')}</span>
-        <span id="y"></span>
-        <script src="http://localhost:3000/toCamelCase/dist/index.js"></script>
-        <script src="http://localhost:3000/laces/dist/index.js"></script>
+        <span id="onServer">${toCamelCase('on server')}</span>
+        <span id="onClient"></span>
+        <span id="api"></span>
+        <script src="http://localhost:3000/browser/toCamelCase.js"></script>
+        <script src="http://localhost:3000/browser/laces.js"></script>
         <script>
         var fn = function() {
-            document.getElementById('y').innerHTML = toCamelCase('on client');
-            console.log(laces);
+            document.getElementById('onClient').innerHTML = toCamelCase('on client');
+            document.getElementById('api').innerHTML = JSON.stringify(Object.keys(laces), null, 2);
         };
         document.addEventListener('DOMContentLoaded', fn, false);
         </script>

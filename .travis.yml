@@ -9,7 +9,7 @@ script:
   - npm run build
   - npm run package
   - npm run bundlesize
-  - cd ./smoke && npm test
+  - cd ./smoke && npm install && npm run sanity
 after_success:
   - npm run coverage
 deploy:

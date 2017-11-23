@@ -14,6 +14,8 @@
     "rebuild": "npm run nuke && npm run build && npm run link",
     "lint": "eslint -c .eslintrc packages",
     "test": "nyc ava",
+    "integration": "cd ./smoke && npm run test",
+    "sanity": "cd ./smoke && npm run sanity",
     "report": "nyc report --reporter=html",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "docs": "inchjs list --all",
@@ -112,7 +114,8 @@
   },
   "ava": {
     "files": [
-      "packages/**/*.test.js"
+      "packages/**/*.test.js",
+      "smoke/node/**/*.test.js"
     ],
     "source": [
       "packages/**/*.js"
