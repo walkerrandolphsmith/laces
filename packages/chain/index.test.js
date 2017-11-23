@@ -1,7 +1,7 @@
 import test from 'ava';
 import sut from './index';
 
-test('identity', t => {
+test('identity', (t) => {
   const actual = sut('1')
     .value();
   t.is(actual, '1');
