@@ -116,7 +116,7 @@ gulp.task('build:browser', (callback) => {
     callback();
 });
 
-gulp.task('build:npm:archive', ['build:npm'], () => {
+gulp.task('build:npm:archive', () => {
     mkdirp('./dist/npm');
 
     packages.map(packageName => {
@@ -129,7 +129,7 @@ gulp.task('build:npm:archive', ['build:npm'], () => {
     })
 });
 
-gulp.task('build:browser:archive', ['build:browser'], () => {
+gulp.task('build:browser:archive', () => {
     mkdirp('./dist/browser');
 
     packages.map(packageName => {
