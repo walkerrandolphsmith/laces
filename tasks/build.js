@@ -142,7 +142,7 @@ gulp.task('build:browser:archive', () => {
     })
 });
 
-gulp.task('package', ['package:npm', 'package:browser']);
+gulp.task('package', ['package:npm', 'package:browser', 'package:source']);
 
 gulp.task('package:npm', ['build:npm:archive'], () => {
     gulp.src('dist/npm/*', { base: './dist/' })
@@ -153,5 +153,11 @@ gulp.task('package:npm', ['build:npm:archive'], () => {
 gulp.task('package:browser', ['build:browser:archive'], () => {
     gulp.src('dist/browser/*', { base: './dist/' })
         .pipe(zip('archive.browser.zip'))
+        .pipe(gulp.dest('./dist'))
+});
+
+gulp.task('package:source', () => {
+    gulp.src('packages/*', { base: './packages/' })
+        .pipe(zip('source.zip'))
         .pipe(gulp.dest('./dist'))
 });

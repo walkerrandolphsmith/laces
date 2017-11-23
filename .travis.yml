@@ -11,3 +11,14 @@ script:
   - npm run bundlesize
 after_success:
   - npm run coverage
+deploy:
+  provider: releases
+  api_key:
+    secure: GITHUB_KEY
+  file: ./dist/archive.node.zip
+  file: ./dist/archive.browser.zip
+  file: ./dist/source.zip
+  skip_cleanup: true
+  on:
+    condition: $TRAVIS_BRANCH == "master"
+    tags: true
