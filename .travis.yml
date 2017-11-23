@@ -9,6 +9,7 @@ script:
   - npm run build
   - npm run package
   - npm run bundlesize
+  - cd ./smoke && npm test
 after_success:
   - npm run coverage
 deploy:
