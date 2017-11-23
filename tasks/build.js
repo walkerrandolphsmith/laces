@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const gutil = require('gulp-util');
+const zip = require('gulp-zip');
 const mkdirp = require('mkdirp');
 const webpack = require('webpack');
 const { join, resolve } = require('path');
@@ -115,9 +116,7 @@ gulp.task('build:browser', (callback) => {
     callback();
 });
 
-gulp.task('package', ['package:npm', 'package:browser']);
-
-gulp.task('package:npm', () => {
+gulp.task('build:npm:archive', () => {
     mkdirp('./dist/npm');
 
     packages.map(packageName => {
@@ -130,7 +129,7 @@ gulp.task('package:npm', () => {
     })
 });
 
-gulp.task('package:browser', () => {
+gulp.task('build:browser:archive', () => {
     mkdirp('./dist/browser');
 
     packages.map(packageName => {
@@ -141,4 +140,18 @@ gulp.task('package:browser', () => {
             ),
         )
     })
+});
+
+gulp.task('package', ['package:npm', 'package:browser']);
+
+gulp.task('package:npm', ['build:npm:archive'], () => {
+    gulp.src('dist/npm/*', { base: './dist/' })
+        .pipe(zip('archive.node.zip'))
+        .pipe(gulp.dest('./dist'))
+});
+
+gulp.task('package:browser', ['build:browser:archive'], () => {
+    gulp.src('dist/browser/*', { base: './dist/' })
+        .pipe(zip('archive.browser.zip'))
+        .pipe(gulp.dest('./dist'))
 });
